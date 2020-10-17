@@ -1,4 +1,4 @@
-﻿State,Month,MonthID,Confirmed,Active,Total Test,Positive (%)
+﻿State,Month,MonthID,Confirmed,Active,TotalTest,Positive
 Australian Capital Territory,February,2,0,0,8,0
 New South Wales,February,2,116,80,211,0.549763033
 Northern Territory,February,2,0,0,21,0

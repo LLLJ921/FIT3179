@@ -14,15 +14,14 @@ vegaEmbed('#mapTotalTest', spec3).then(function(result) {
   // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
-var c = document.getElementById("mapConfirmed");
-var a = document.getElementById("mapActive");
-var t = document.getElementById("mapTotalTest");
-
-var cButton = document.getElementById("buttonConfirmed");
-var aButton = document.getElementById("buttonActive");
-var tButton = document.getElementById("buttonTotalTest");
-
 function mapConfirmed() {
+  var c = document.getElementById("mapConfirmed");
+  var a = document.getElementById("mapActive");
+  var t = document.getElementById("mapTotalTest");
+
+  var cButton = document.getElementById("buttonConfirmed");
+  var aButton = document.getElementById("buttonActive");
+  var tButton = document.getElementById("buttonTotalTest");
   if (c.style.display === "none") {
     c.style.display = "block";
     a.style.display = "none";
@@ -37,6 +36,14 @@ function mapConfirmed() {
 }
 
 function mapActive() {
+  var c = document.getElementById("mapConfirmed");
+  var a = document.getElementById("mapActive");
+  var t = document.getElementById("mapTotalTest");
+
+  var cButton = document.getElementById("buttonConfirmed");
+  var aButton = document.getElementById("buttonActive");
+  var tButton = document.getElementById("buttonTotalTest");
+  
   if (a.style.display === "none") {
     c.style.display = "none";
     a.style.display = "block";
@@ -51,6 +58,14 @@ function mapActive() {
 }
 
 function mapTest() {
+  var c = document.getElementById("mapConfirmed");
+  var a = document.getElementById("mapActive");
+  var t = document.getElementById("mapTotalTest");
+
+  var cButton = document.getElementById("buttonConfirmed");
+  var aButton = document.getElementById("buttonActive");
+  var tButton = document.getElementById("buttonTotalTest");
+  
   if (t.style.display === "none") {
     c.style.display = "none";
     a.style.display = "none";

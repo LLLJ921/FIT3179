@@ -6,11 +6,12 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
   <!-- Import vega-embed -->
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
 </head>
 <body>
-<button onclick="mapConfirmed()">Confirmed Cases</button>
-<button onclick="mapActive()">Active Cases</button>
-<button onclick="mapTest()">Total Test</button>
+<button class="pure-button pure-button-primary" onclick="mapConfirmed()">Confirmed Cases</button>
+<button class="pure-button pure-button-primary" onclick="mapActive()">Active Cases</button>
+<button class="pure-button pure-button-primary" onclick="mapTest()">Total Test</button>
 <div id="mapConfirmed" style="display: none"></div>
 <div id="mapActive" style="display: none"></div>
 <div id="mapTotalTest" style="display: none"></div>

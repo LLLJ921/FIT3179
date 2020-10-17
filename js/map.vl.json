@@ -1,0 +1,59 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "COVID-19 Case by State",
+  "width": 1000,
+  "height": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/Aus_Month_confirm.csv"
+  },
+  "transform": [
+    {
+      "lookup": "State",
+      "from": {
+        "data": {
+          "url": "https://clairpan.github.io/FIT3179/data/Aus_State.json",
+          "format": {"type": "topojson", "feature": "STE_2016_AUST"}
+        },
+        "key": "properties.STE_NAME16"
+      },
+      "as": "geo"
+    },
+    {"calculate": "datum.Confirmed + 0.1", "as": "Confirmed Cases"}
+  ],
+  "selection": {
+    "month": {
+      "type": "single",
+      "fields": ["Month"],
+      "bind": {
+        "input": "radio",
+        "options": [
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October"
+        ],
+        "name": "Month "
+      },
+      "init": {"Month": "February"}
+    }
+  },
+  "mark": {"type": "geoshape", "stroke": "white"},
+  "projection": {"type": "equirectangular"},
+  "encoding": {
+    "shape": {"field": "geo", "type": "geojson"},
+    "color": {
+      "condition": {
+        "selection": "month",
+        "field": "Confirmed Cases",
+        "type": "quantitative",
+        "scale": {"type": "log"}
+      }
+    }
+  },
+  "config": {}
+}

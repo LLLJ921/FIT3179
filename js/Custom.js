@@ -62,3 +62,4 @@ function mapTest() {
     aButton.classList.add('pure-button-primary');
     tButton.classList.add('button-success');
   }
+}

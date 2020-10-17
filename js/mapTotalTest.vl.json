@@ -1,0 +1,81 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "title": "COVID-19 Case by State",
+    "width": 1000,
+    "height": 600,
+    "data": {
+      "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/Aus_Month_confirmed.csv"
+    },
+    "mark": {"type": "geoshape", "stroke": "white"},
+    "projection": {"type": "equirectangular"},
+    "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+        "fillOpacity": {
+            "condition": {"selection": "select", "value": 1},
+            "value": 0.3
+          },
+        "color": {
+            "field": "Total Test (%)",
+            "type": "quantitative",
+            "scale": {
+                "type": "threshold",
+                "domain": [0.1, 1, 10],
+                "range": ["#fee5d9", "#fcae91", "#fb6a4a", "#cb181d"]
+                }
+        },
+        "tooltip": [
+            {"field": "State", "type": "nominal"},
+            {"field": "TotalTest", "type": "quantitative"},
+            {"field": "Total Test (%)", "type": "quantitative", "format": ".3f"}
+        ]
+    },
+    "transform": [
+      {
+        "lookup": "State",
+        "from": {
+          "data": {
+            "url": "https://clairpan.github.io/FIT3179/data/Aus_State.json",
+            "format": {"type": "topojson", "feature": "STE_2016_AUST"}
+          },
+          "key": "properties.STE_NAME16"
+        },
+        "as": "geo"
+      },
+      {
+        "lookup": "State",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/AustralianPopulation.csv"
+          },
+          "key": "State",
+          "fields": ["Population"]
+        }
+      },
+      {"calculate": "datum.TotalTest/datum.Population * 100", "as": "Total Test (%)"},
+      {"filter": {"selection": "month"}}
+    ],
+    "selection": {
+      "month": {
+        "type": "single",
+        "fields": ["Month"],
+        "bind": {
+          "input": "radio",
+          "options": [
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October"
+          ],
+          "name": "Month: "
+        },
+        "init": {"Month": "October"}
+      },
+      "highlight": {"type": "single", "empty": "none", "on": "mouseover"},
+      "select": {"type": "multi"}
+    }
+  }

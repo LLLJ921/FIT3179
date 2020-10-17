@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "title": "COVID-19 Case by State",
+    "title": "COVID-19 Confirmed Case by State",
     "width": 1000,
     "height": 600,
     "data": {

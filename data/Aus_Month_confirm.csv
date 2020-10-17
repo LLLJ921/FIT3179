@@ -1,73 +1,73 @@
-﻿State,Month,Confirmed
-Australian Capital Territory,February,0
-New South Wales,February,116
-Northern Territory,February,0
-Queensland,February,136
-South Australia,February,58
-Tasmania,February,0
-Victoria,February,119
-Western Australia,February,2
-Australian Capital Territory,March,80
-New South Wales,March,2026
-Northern Territory,March,17
-Queensland,March,734
-South Australia,March,334
-Tasmania,March,69
-Victoria,March,910
-Western Australia,March,362
-Australian Capital Territory,April,22
-New South Wales,April,843
-Northern Territory,April,9
-Queensland,April,252
-South Australia,April,71
-Tasmania,April,152
-Victoria,April,396
-Western Australia,April,159
-Australian Capital Territory,May,1
-New South Wales,May,68
-Northern Territory,May,2
-Queensland,May,24
-South Australia,May,2
-Tasmania,May,7
-Victoria,May,282
-Western Australia,May,38
-Australian Capital Territory,June,1
-New South Wales,June,99
-Northern Territory,June,0
-Queensland,June,8
-South Australia,June,3
-Tasmania,June,0
-Victoria,June,568
-Western Australia,June,20
-Australian Capital Territory,July,5
-New South Wales,July,562
-Northern Territory,July,3
-Queensland,July,17
-South Australia,July,8
-Tasmania,July,1
-Victoria,July,8628
-Western Australia,July,55
-Australian Capital Territory,August,0
-New South Wales,August,279
-Northern Territory,August,0
-Queensland,August,39
-South Australia,August,10
-Tasmania,August,1
-Victoria,August,7581
-Western Australia,August,14
-Australian Capital Territory,September,0
-New South Wales,September,148
-Northern Territory,September,0
-Queensland,September,31
-South Australia,September,5
-Tasmania,September,0
-Victoria,September,959
-Western Australia,September,30
-Australian Capital Territory,October,0
-New South Wales,October,42
-Northern Territory,October,0
-Queensland,October,1
-South Australia,October,5
-Tasmania,October,0
-Victoria,October,80
-Western Australia,October,7
+﻿State,Month,MonthID,Confirmed
+Australian Capital Territory,February,2,0
+New South Wales,February,2,116
+Northern Territory,February,2,0
+Queensland,February,2,136
+South Australia,February,2,58
+Tasmania,February,2,0
+Victoria,February,2,119
+Western Australia,February,2,2
+Australian Capital Territory,March,3,80
+New South Wales,March,3,2026
+Northern Territory,March,3,17
+Queensland,March,3,734
+South Australia,March,3,334
+Tasmania,March,3,69
+Victoria,March,3,910
+Western Australia,March,3,362
+Australian Capital Territory,April,4,22
+New South Wales,April,4,843
+Northern Territory,April,4,9
+Queensland,April,4,252
+South Australia,April,4,71
+Tasmania,April,4,152
+Victoria,April,4,396
+Western Australia,April,4,159
+Australian Capital Territory,May,5,1
+New South Wales,May,5,68
+Northern Territory,May,5,2
+Queensland,May,5,24
+South Australia,May,5,2
+Tasmania,May,5,7
+Victoria,May,5,282
+Western Australia,May,5,38
+Australian Capital Territory,June,6,1
+New South Wales,June,6,99
+Northern Territory,June,6,0
+Queensland,June,6,8
+South Australia,June,6,3
+Tasmania,June,6,0
+Victoria,June,6,568
+Western Australia,June,6,20
+Australian Capital Territory,July,7,5
+New South Wales,July,7,562
+Northern Territory,July,7,3
+Queensland,July,7,17
+South Australia,July,7,8
+Tasmania,July,7,1
+Victoria,July,7,8628
+Western Australia,July,7,55
+Australian Capital Territory,August,8,0
+New South Wales,August,8,279
+Northern Territory,August,8,0
+Queensland,August,8,39
+South Australia,August,8,10
+Tasmania,August,8,1
+Victoria,August,8,7581
+Western Australia,August,8,14
+Australian Capital Territory,September,9,0
+New South Wales,September,9,148
+Northern Territory,September,9,0
+Queensland,September,9,31
+South Australia,September,9,5
+Tasmania,September,9,0
+Victoria,September,9,959
+Western Australia,September,9,30
+Australian Capital Territory,October,10,0
+New South Wales,October,10,42
+Northern Territory,October,10,0
+Queensland,October,10,1
+South Australia,October,10,5
+Tasmania,October,10,0
+Victoria,October,10,80
+Western Australia,October,10,7

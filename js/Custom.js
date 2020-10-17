@@ -29,6 +29,9 @@ function mapConfirmed() {
     cButton.classList.remove('pure-button-primary');
     aButton.classList.remove('pure-button-primary');
     tButton.classList.remove('pure-button-primary');
+    cButton.classList.remove('button-success');
+    aButton.classList.remove('button-success');
+    tButton.classList.remove('button-success');
     cButton.classList.add('button-success');
     aButton.classList.add('pure-button-primary');
     tButton.classList.add('pure-button-primary');
@@ -51,6 +54,9 @@ function mapActive() {
     cButton.classList.remove('pure-button-primary');
     aButton.classList.remove('pure-button-primary');
     tButton.classList.remove('pure-button-primary');
+    cButton.classList.remove('button-success');
+    aButton.classList.remove('button-success');
+    tButton.classList.remove('button-success');
     cButton.classList.add('pure-button-primary');
     aButton.classList.add('button-success');
     tButton.classList.add('pure-button-primary');
@@ -73,6 +79,9 @@ function mapTest() {
     cButton.classList.remove('pure-button-primary');
     aButton.classList.remove('pure-button-primary');
     tButton.classList.remove('pure-button-primary');
+    cButton.classList.remove('button-success');
+    aButton.classList.remove('button-success');
+    tButton.classList.remove('button-success');
     cButton.classList.add('pure-button-primary');
     aButton.classList.add('pure-button-primary');
     tButton.classList.add('button-success');

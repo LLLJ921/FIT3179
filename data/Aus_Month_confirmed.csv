@@ -1,0 +1,73 @@
+﻿State,Month,MonthID,Confirmed,Active,Total Test,Positive (%)
+Australian Capital Territory,February,2,0,0,8,0
+New South Wales,February,2,116,80,211,0.549763033
+Northern Territory,February,2,0,0,21,0
+Queensland,February,2,136,100,152,0.894736842
+South Australia,February,2,58,38,207,0.280193237
+Tasmania,February,2,0,0,34,0
+Victoria,February,2,119,82,200,0.595
+Western Australia,February,2,2,1,19,0.105263158
+Australian Capital Territory,March,3,80,45,2080,0.038461538
+New South Wales,March,3,2026,1238,5890,0.343972835
+Northern Territory,March,3,17,5,1098,0.015482696
+Queensland,March,3,734,127,7986,0.091910844
+South Australia,March,3,334,67,2898,0.115251898
+Tasmania,March,3,69,53,2787,0.024757804
+Victoria,March,3,910,471,10089,0.090197245
+Western Australia,March,3,362,213,28983,0.01249008
+Australian Capital Territory,April,4,22,10,886,0.0248307
+New South Wales,April,4,843,108,78688,0.010713196
+Northern Territory,April,4,9,3,8979,0.001002339
+Queensland,April,4,252,98,78791,0.003198335
+South Australia,April,4,71,17,10897,0.006515555
+Tasmania,April,4,152,56,98799,0.001538477
+Victoria,April,4,396,189,100897,0.003924795
+Western Australia,April,4,159,87,8989,0.017688286
+Australian Capital Territory,May,5,1,0,8979,0.000111371
+New South Wales,May,5,68,37,18979,0.003582907
+Northern Territory,May,5,2,0,27871,7.18E-05
+Queensland,May,5,24,15,78362,0.000306271
+South Australia,May,5,2,0,4897,0.000408413
+Tasmania,May,5,7,2,8962,0.000781076
+Victoria,May,5,282,208,118632,0.002377099
+Western Australia,May,5,38,12,10872,0.003495217
+Australian Capital Territory,June,6,1,1,2897,0.000345185
+New South Wales,June,6,99,65,38970,0.002540416
+Northern Territory,June,6,0,0,877,0
+Queensland,June,6,8,3,8961,0.000892758
+South Australia,June,6,3,1,28979,0.000103523
+Tasmania,June,6,0,0,2781,0
+Victoria,June,6,568,346,89766,0.006327563
+Western Australia,June,6,20,1,12872,0.00155376
+Australian Capital Territory,July,7,5,0,1322,0.003782148
+New South Wales,July,7,562,321,12089,0.046488543
+Northern Territory,July,7,3,0,1898,0.001580611
+Queensland,July,7,17,6,9786,0.001737176
+South Australia,July,7,8,2,7898,0.001012915
+Tasmania,July,7,1,0,1782,0.000561167
+Victoria,July,7,8628,4568,1205327,0.007158223
+Western Australia,July,7,55,15,43223,0.001272471
+Australian Capital Territory,August,8,0,0,2784,0
+New South Wales,August,8,279,108,76623,0.003641204
+Northern Territory,August,8,0,0,897,0
+Queensland,August,8,39,12,1897,0.020558777
+South Australia,August,8,10,3,18993,0.00052651
+Tasmania,August,8,1,0,1787,0.000559597
+Victoria,August,8,7581,6587,18967,0.399694206
+Western Australia,August,8,14,8,897,0.015607581
+Australian Capital Territory,September,9,0,0,2786,0
+New South Wales,September,9,148,29,7865,0.018817546
+Northern Territory,September,9,0,0,27810,0
+Queensland,September,9,31,12,97297,0.000318612
+South Australia,September,9,5,1,17628,0.00028364
+Tasmania,September,9,0,0,78658,0
+Victoria,September,9,959,789,2008722,0.000477418
+Western Australia,September,9,30,12,8917,0.00336436
+Australian Capital Territory,October,10,0,0,7973,0
+New South Wales,October,10,42,42,7966,0.005272408
+Northern Territory,October,10,0,0,89897,0
+Queensland,October,10,1,0,797,0.001254705
+South Australia,October,10,5,0,96787,5.17E-05
+Tasmania,October,10,0,0,9797,0
+Victoria,October,10,80,72,14782,0.005411988
+Western Australia,October,10,7,3,289,0.024221453

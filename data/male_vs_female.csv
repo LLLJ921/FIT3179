@@ -1,10 +1,19 @@
-﻿AGE_GROUP,Probability_of_infection_Male ,Probability_of_infection_Female
-0 - 15 years,0.32%,0.18%
-16 - 25 years ,9.77%,6.21%
-26 - 35 years ,11.98%,8.98%
-36 - 45 years ,13.87%,13.43%
-46 - 55 years,19.23%,12.98%
-56 - 65 years ,20.12%,18.93%
-66 - 75 years ,32.71%,24.87%
-76 - 85 years ,53.87%,38.15%
-86 + years ,38.20%,46.99%
+﻿AGE_GROUP,Gender,Probability_of_infection
+0 - 15 years,Female,0.18%
+0 - 15 years,Male,0.32%
+16 - 25 years,Female,6.21%
+16 - 25 years,Male,9.77%
+26 - 35 years,Female,8.98%
+26 - 35 years,Male,11.98%
+36 - 45 years,Female,13.43%
+36 - 45 years,Male,13.87%
+46 - 55 years,Female,12.98%
+46 - 55 years,Male,19.23%
+56 - 65 years,Female,18.93%
+56 - 65 years,Male,20.12%
+66 - 75 years,Female,24.87%
+66 - 75 years,Male,32.71%
+76 - 85 years,Female,38.15%
+76 - 85 years,Male,53.87%
+86 + years,Female,46.99%
+86 + years,Male,38.20%

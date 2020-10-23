@@ -1,0 +1,71 @@
+Month,MonthID,Country,Confirmed,Deaths,Recovered,Active,WHO Region
+January,1,Australia,38,0,4,34,Western Pacific
+January,1,Canada,12,0,0,12,Americas
+January,1,China,38008,889,804,36315,Western Pacific
+January,1,France,30,0,0,30,Europe
+January,1,India,2,0,0,2,South-East Asia
+January,1,Italy,2,0,0,2,Europe
+January,1,New Zealand,0,0,0,0,Western Pacific
+January,1,Russia,2,0,0,2,Europe
+January,1,United Kingdom,2,0,0,2,Eastern Mediterranean
+January,1,US,38,0,0,38,Americas
+February,2,Australia,431,0,195,236,Western Pacific
+February,2,Canada,234,0,0,234,Americas
+February,2,China,1634869,46417,360036,1228416,Western Pacific
+February,2,France,466,19,102,345,Europe
+February,2,India,84,0,42,42,South-East Asia
+February,2,Italy,3966,102,145,3719,Europe
+February,2,New Zealand,2,0,0,2,Western Pacific
+February,2,Russia,58,0,36,22,Europe
+February,2,United Kingdom,606,0,116,490,Eastern Mediterranean
+February,2,US,378,1,88,289,Americas
+March,3,Australia,35679,190,2307,33182,Western Pacific
+March,3,Canada,51831,554,0,51277,Americas
+March,3,China,2515426,98488,1959975,456963,Western Pacific
+March,3,France,410316,21330,52910,336076,Europe
+March,3,India,10252,226,818,9208,South-East Asia
+March,3,Italy,1209772,116616,145571,947585,Europe
+March,3,New Zealand,3637,3,341,3293,Western Pacific
+March,3,Russia,12224,54,568,11602,Europe
+March,3,United Kingdom,283195,12484,1925,268786,Eastern Mediterranean
+March,3,US,1091068,26160,19730,1045178,Americas
+April,4,Australia,188206,1817,91483,94906,Western Pacific
+April,4,Canada,929498,40599,0,888899,Americas
+April,4,China,2500143,118290,2285997,95856,Western Pacific
+April,4,France,3722152,486814,940782,2294556,Europe
+April,4,India,447607,14417,85811,347379,South-East Asia
+April,4,Italy,4928524,644171,1266518,3017835,Europe
+April,4,New Zealand,38859,272,20597,17990,Western Pacific
+April,4,Russia,1129437,10123,96017,1023297,Europe
+April,4,United Kingdom,3328344,456808,14880,2856656,Eastern Mediterranean
+April,4,US,19552582,1035013,1747977,16769592,Americas
+May,5,Australia,217625,3071,195488,19066,Western Pacific
+May,5,Canada,2369286,174037,0,2195249,Americas
+May,5,China,2605281,143763,2405534,55984,Western Pacific
+May,5,France,5548657,845222,1865205,2838230,Europe
+May,5,India,3088494,94154,1216954,1777386,South-East Asia
+May,5,Italy,6914863,973585,3706270,2235008,Europe
+May,5,New Zealand,46429,652,43628,2149,Western Pacific
+May,5,Russia,8257093,82313,2281612,5893168,Europe
+May,5,United Kingdom,7016710,1055051,32790,5928869,Eastern Mediterranean
+May,5,US,45407574,2728676,8720047,33958851,Americas
+June,6,Australia,222611,3075,205100,14436,Western Pacific
+June,6,Canada,3016042,245820,0,2770222,Americas
+June,6,China,2532679,139165,2337664,55850,Western Pacific
+June,6,France,5849444,883613,2193201,2772630,Europe
+June,6,India,10951713,331856,5916008,4703849,South-East Asia
+June,6,Italy,7115232,1028841,5284972,801419,Europe
+June,6,New Zealand,45317,660,44470,187,Western Pacific
+June,6,Russia,16097579,215268,8852843,7029468,Europe
+June,6,United Kingdom,8213357,1258183,38818,6916356,Eastern Mediterranean
+June,6,US,64933835,3518537,17434297,43981001,Americas
+July,7,Australia,295657,3234,217351,75072,Western Pacific
+July,7,Canada,2989648,238556,0,2751092,Americas
+July,7,China,2305596,125401,2116856,63339,Western Pacific
+July,7,France,5679861,811526,2129915,2738420,Europe
+July,7,India,26385312,671178,16564087,9150047,South-East Asia
+July,7,Italy,6572786,944402,5270434,357950,Europe
+July,7,New Zealand,41735,594,40524,617,Western Pacific
+July,7,Russia,19912018,311627,13889372,5711019,Europe
+July,7,United Kingdom,7906373,1215249,37688,6653436,Eastern Mediterranean
+July,7,US,93360473,3703024,28431277,61226172,Americas

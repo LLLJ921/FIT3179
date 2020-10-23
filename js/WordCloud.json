@@ -1,0 +1,93 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "A word cloud visualization depicting Vega research paper abstracts.",
+  "width": 800,
+  "height": 400,
+  "padding": 0,
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {"text": "NIGHTCLUB", "count": 14, "angle": -45, "weight": 300},
+        {"text": "INDOOR PARTY", "count": 13, "angle": -45, "weight": 300},
+        {"text": "CHURCH", "count": 13, "angle": 0, "weight": 300},
+        {"text": "HUG OR SHAKE HANDS", "count": 13, "angle": 0, "weight": 600},
+        {
+          "text": "ATTEND A WEDDING/FUNERAL",
+          "count": 12,
+          "angle": 0,
+          "weight": 300
+        },
+        {"text": "CASINO", "count": 10, "angle": 45, "weight": 300},
+        {"text": "AIRPLANE", "count": 9, "angle": -45, "weight": 300},
+        {"text": "GET A HAIRCUT", "count": 8, "angle": -45, "weight": 300},
+        {"text": "PUBLIC POOL", "count": 8, "angle": 0, "weight": 300},
+        {"text": "BOWLING", "count": 7, "angle": 0, "weight": 300},
+        {"text": "BASKETBALL", "count": 7, "angle": -45, "weight": 300},
+        {"text": "GROCERY SHOPPING", "count": 7, "angle": 0, "weight": 300},
+        {"text": "SEE YOUR DOCTOR", "count": 5, "angle": 0, "weight": 300},
+        {"text": "BEACH", "count": 5, "angle": 0, "weight": 300},
+        {"text": "VOCATION", "count": 5, "angle": -45, "weight": 300},
+        {
+          "text": "WALK IN BUSY DOWNTOWN",
+          "count": 5,
+          "angle": 0,
+          "weight": 300
+        },
+        {"text": "GOLF", "count": 3, "angle": -45, "weight": 300},
+        {"text": "TAKE AWAY FOOD", "count": 2, "angle": 0, "weight": 300},
+        {"text": "TENNIS", "count": 1, "angle": 0, "weight": 300},
+        {"text": "OUTDOOR EXERCISE", "count": 1, "angle": -45, "weight": 300}
+      ],
+      "transform": [
+        {
+          "type": "formula",
+          "as": "angle",
+          "expr": "[-45, 0, 45][~~(random() * 3)]"
+        },
+        {
+          "type": "formula",
+          "as": "weight",
+          "expr": "if(datum.text=='HUG OR SHAKE HANDS', 600, 300)"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "table", "field": "text"},
+      "range": ["#a50f15", "#652c90", "#d5a928"]
+    }
+  ],
+  "marks": [
+    {
+      "type": "text",
+      "from": {"data": "table"},
+      "encode": {
+        "enter": {
+          "text": {"field": "text"},
+          "align": {"value": "center"},
+          "baseline": {"value": "alphabetic"},
+          "fill": {"scale": "color", "field": "text"}
+        },
+        "update": {"fillOpacity": {"value": 1}},
+        "hover": {"fillOpacity": {"value": 0.5}}
+      },
+      "transform": [
+        {
+          "type": "wordcloud",
+          "size": [800, 400],
+          "text": {"field": "text"},
+          "font": "Helvetica Neue, Arial",
+          "fontSize": {"field": "datum.count"},
+          "fontWeight": {"field": "datum.weight"},
+          "fontSizeRange": [12, 56],
+          "padding": 2
+        }
+      ]
+    }
+  ],
+  "config": {}
+}

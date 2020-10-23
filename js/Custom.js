@@ -186,7 +186,7 @@ function startFunction(){
 
 function changeMonthName(e) {
     switch (e.innerText) {
-        case "2":
+        case 2:
             console.log("2");
             e.innerText = "February";
             break;

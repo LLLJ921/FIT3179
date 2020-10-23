@@ -182,7 +182,7 @@ setTimeout(function () {
     changeMonthName(document.querySelectorAll('.slider .vega-bind span')[1]);
     changeMonthName(document.querySelectorAll('.slider .vega-bind span')[3]);
     changeMonthName(document.querySelectorAll('.slider .vega-bind span')[5]);
-}, 1000);
+}, 3000);
 
 function changeMonthName(e) {
     switch (e.innerText) {

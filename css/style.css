@@ -46,33 +46,8 @@ h2 {
     margin: 10px 0;
 }
 
-
-.header {
-    position: relative;
-    height: 120px;
-    padding-top: 30px;
-}
-
-.bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(https://raw.githubusercontent.com/ClairPan/FIT3179/main/img/banner.jpg);
-    background-position: 40%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    z-index: -1;
-    -webkit-filter: brightness(.6);
-    filter: brightness(.6);
-}
-
-.slogan {
-    text-align: center;
-    margin-top: -5px;
-    margin-bottom: -10px;
-    color: white;
+.row .text {
+    padding-right: 10px;
 }
 
 .visContainer {
@@ -118,3 +93,35 @@ h2 {
     background: rgb(66, 184, 221);
     /* this is a light blue */
 }
+
+/* header row */
+.header {
+    position: relative;
+    height: 120px;
+    padding-top: 30px;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://raw.githubusercontent.com/ClairPan/FIT3179/main/img/banner.jpg);
+    background-position: 40%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    -webkit-filter: brightness(.6);
+    filter: brightness(.6);
+}
+
+.slogan {
+    text-align: center;
+    margin-top: -5px;
+    margin-bottom: -10px;
+    color: white;
+}
+
+/* first row: World Case Line Chart */
+

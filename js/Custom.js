@@ -185,9 +185,9 @@ setTimeout(function () {
     changeMonthName(document.querySelectorAll('.slider .vega-bind span')[3]);
     changeMonthName(document.querySelectorAll('.slider .vega-bind span')[5]);
 
-    document.querySelectorAll('.slider .vega-bind span')[1].onchange = function () { changeMonthName(document.querySelectorAll('.slider .vega-bind span')[1]); };
-    document.querySelectorAll('.slider .vega-bind span')[3].onchange = function () { changeMonthName(document.querySelectorAll('.slider .vega-bind span')[3]); };
-    document.querySelectorAll('.slider .vega-bind span')[5].onchange = function () { changeMonthName(document.querySelectorAll('.slider .vega-bind span')[5]); };
+    document.querySelectorAll('.slider .vega-bind span')[1].addEventListener("change", changeMonthName(document.querySelectorAll('.slider .vega-bind span')[1]));
+    document.querySelectorAll('.slider .vega-bind span')[3].addEventListener("change", changeMonthName(document.querySelectorAll('.slider .vega-bind span')[3]));
+    document.querySelectorAll('.slider .vega-bind span')[5].addEventListener("change", changeMonthName(document.querySelectorAll('.slider .vega-bind span')[5]));
 }, 1000);
 
 function changeMonthName(e) {

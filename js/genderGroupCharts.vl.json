@@ -1,0 +1,139 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Gender Balance Each Month                                     Probability of Infection by Age Groups",
+  "params": [
+    {
+      "name": "Month_selection",
+      "value": 2,
+      "bind": {
+        "input": "range",
+        "min": 2,
+        "max": 10,
+        "step": 1,
+        "name": "Month: "
+      }
+    }
+  ],
+  "hconcat": [
+    {
+      "selection": {
+        "gender_highlight": {
+          "type": "single",
+          "fields": ["Gender"],
+          "bind": "legend"
+        }
+      },
+      "width": 200,
+      "height": 200,
+      "data": {
+        "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/donut.csv"
+      },
+      "transform": [{"filter": "datum.MonthID == Month_selection"}],
+      "mark": {"type": "arc", "innerRadius": 50},
+      "encoding": {
+        "theta": {"field": "PercentageFull", "type": "quantitative"},
+        "color": {
+          "field": "Gender",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Female", "Male"],
+            "range": ["#ef6548", "#3690c0"]
+          }
+        },
+        "opacity": {
+          "condition": {"selection": "gender_highlight", "value": 1},
+          "value": 0.2
+        },
+        "tooltip": [
+          {"field": "Gender", "type": "nominal"},
+          {
+            "field": "PercentageFull",
+            "type": "quantitative",
+            "format": ".2f",
+            "title": "Percentage (%)"
+          }
+        ]
+      },
+      "view": {"stroke": null}
+    },
+    {
+      "width": 300,
+      "height": 200,
+      "data": {
+        "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/male_vs_female.csv"
+      },
+      "encoding": {
+        "x": {
+          "field": "Probability",
+          "type": "quantitative",
+          "title": "Probability of Infection (%)"
+        },
+        "y": {
+          "field": "AGE_GROUP",
+          "type": "nominal",
+          "sort": "descending",
+          "title": "Age Group",
+          "axis": {
+            "offset": 5,
+            "ticks": false,
+            "minExtent": 70,
+            "domain": false
+          }
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum.Probability_of_infection * 100",
+          "as": "Probability"
+        }
+      ],
+      "layer": [
+        {
+          "mark": "line",
+          "encoding": {
+            "detail": {"field": "AGE_GROUP", "type": "nominal"},
+            "color": {"value": "#grey"}
+          }
+        },
+        {
+          "selection": {
+            "grid": {"type": "interval", "bind": "scales"},
+            "gender_highlight": {
+              "type": "single",
+              "fields": ["Gender"],
+              "bind": "legend"
+            }
+          },
+          "mark": {"type": "point", "filled": true},
+          "encoding": {
+            "color": {
+              "field": "Gender",
+              "type": "nominal",
+              "scale": {
+                "domain": ["Female", "Male"],
+                "range": ["#ef6548", "#3690c0"]
+              },
+              "title": "Gender"
+            },
+            "size": {"value": 100},
+            "opacity": {
+              "condition": {"selection": "gender_highlight", "value": 1},
+              "value": 0.2
+            },
+            "tooltip": [
+              {"field": "AGE_GROUP", "type": "nominal", "title": "Age Group"},
+              {"field": "Gender", "type": "nominal"},
+              {
+                "field": "Probability",
+                "type": "quantitative",
+                "format": ".2f",
+                "title": "Probability of Infection (%)"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "config": {}
+}

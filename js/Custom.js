@@ -6,6 +6,8 @@ var spec4 = "https://clairpan.github.io/FIT3179/js/line_Confirmed.vl.json";
 var spec5 = "https://clairpan.github.io/FIT3179/js/line_active.vl.json";
 var spec6 = "https://clairpan.github.io/FIT3179/js/line_death.vl.json";
 
+var spec7 = "https://clairpan.github.io/FIT3179/js/genderGroupCharts.vl.json";
+
 vegaEmbed('#mapConfirmed', spec1).then(function(result) {
   // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
@@ -27,6 +29,10 @@ vegaEmbed('#lineActive', spec5).then(function (result) {
 }).catch(console.error);
 
 vegaEmbed('#lineDeath', spec6).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+
+vegaEmbed('#genderGroup', spec7).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 

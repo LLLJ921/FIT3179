@@ -185,39 +185,34 @@ setTimeout(function () {
 }, 1000);
 
 function changeMonthName(e) {
-    console.log(e.innerText);
-    if (e.innerText == 2) {
-        console.log("222");
-    }
     switch (e.innerText) {
         case 2:
-            console.log("2");
-            e.innerText = "February";
+            e.innerHTML = "February";
             break;
         case "3":
             console.log("3");
-            e.innerText = "March";
+            e.innerHTML = "March";
             break;
         case "4":
-            e.innerText = "April";
+            e.innerHTML = "April";
             break;
         case "5":
-            e.innerText = "May";
+            e.innerHTML = "May";
             break;
         case "6":
-            e.innerText = "June";
+            e.innerHTML = "June";
             break;
         case "7":
-            e.innerText = "July";
+            e.innerHTML = "July";
             break;
         case "8":
-            e.innerText = "August";
+            e.innerHTML = "August";
             break;
         case "9":
-            e.innerText = "Sepetember";
+            e.innerHTML = "Sepetember";
             break;
         case "10":
-            e.innerText = "October";
+            e.innerHTML = "October";
     }
 }
 

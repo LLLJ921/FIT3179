@@ -72,7 +72,7 @@
       "transform": [
         {
           "type": "wordcloud",
-          "size": [600, 300],
+          "size": [700, 400],
           "text": {"field": "text"},
           "font": "Helvetica Neue, Arial",
           "fontSize": {"field": "datum.count"},

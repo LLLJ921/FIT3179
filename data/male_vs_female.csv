@@ -1,4 +1,4 @@
-﻿AGE_GROUP, Probability of infection - Male ,Probability of infection - Female
+﻿AGE_GROUP,Probability_of_infection_Male ,Probability_of_infection_Female
 0 - 15 years,0.32%,0.18%
 16 - 25 years ,9.77%,6.21%
 26 - 35 years ,11.98%,8.98%

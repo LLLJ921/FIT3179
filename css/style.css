@@ -95,6 +95,15 @@ h2 {
     /* this is a light blue */
 }
 
+/* embeded vis */
+.vega-bind span {
+    margin: 0 20px;
+}
+
+.vega-bind input {
+    height: 10px;
+}
+
 /* header row */
 .header {
     position: relative;

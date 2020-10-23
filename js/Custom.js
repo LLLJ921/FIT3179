@@ -177,3 +177,42 @@ function lineDeath() {
         tButton.classList.add('button-success');
     }
 }
+
+
+$(document).ready(function () {
+    changeMonthName(document.querySelectorAll('.slider .vega-bind span')[1]);
+    changeMonthName(document.querySelectorAll('.slider .vega-bind span')[3]);
+    changeMonthName(document.querySelectorAll('.slider .vega-bind span')[5]);
+});
+
+function changeMonthName(e) {
+    switch (e) {
+        case 2:
+            e.innerText = "February";
+            break;
+        case 3:
+            e.innerText = "March";
+            break;
+        case 4:
+            e.innerText = "April";
+            break;
+        case 5:
+            e.innerText = "May";
+            break;
+        case 6:
+            e.innerText = "June";
+            break;
+        case 7:
+            e.innerText = "July";
+            break;
+        case 8:
+            e.innerText = "August";
+            break;
+        case 9:
+            e.innerText = "Sepetember";
+            break;
+        case 10:
+            e.innerText = "October";
+    }
+}
+

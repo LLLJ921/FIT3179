@@ -111,7 +111,7 @@ function lineConfirmed() {
 
     var cButton = document.getElementById("buttonLineConfirmed");
     var aButton = document.getElementById("buttonLineActive");
-    var tButton = document.getElementById("buttonLineTotalTest");
+    var tButton = document.getElementById("buttonLineDeath");
     if (c.style.display === "none") {
         c.style.display = "block";
         a.style.display = "none";
@@ -135,7 +135,7 @@ function lineActive() {
 
     var cButton = document.getElementById("buttonLineConfirmed");
     var aButton = document.getElementById("buttonLineActive");
-    var tButton = document.getElementById("buttonLineTotalTest");
+    var tButton = document.getElementById("buttonLineDeath");
 
     if (a.style.display === "none") {
         c.style.display = "none";
@@ -160,7 +160,7 @@ function lineDeath() {
 
     var cButton = document.getElementById("buttonLineConfirmed");
     var aButton = document.getElementById("buttonLineActive");
-    var tButton = document.getElementById("buttonLineTotalTest");
+    var tButton = document.getElementById("buttonLineDeath");
 
     if (t.style.display === "none") {
         c.style.display = "none";

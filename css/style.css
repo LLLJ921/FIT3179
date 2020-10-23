@@ -77,7 +77,7 @@ h2 {
 
 .visContainer {
     width: 100%;
-    padding: 0px;
+    padding: 0px !important;
 }
 
 .buttonGroup {

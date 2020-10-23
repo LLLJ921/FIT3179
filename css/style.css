@@ -21,6 +21,7 @@ h2 {
     border-bottom: 1px solid #efefef;
     position: relative;
     width: 100%;
+    margin-top: 10px;
 }
 
 .page {
@@ -34,7 +35,7 @@ h2 {
 .row {
     position: relative;
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
     min-width: 0;
     word-wrap: break-word;
     background-color: #fff;
@@ -76,7 +77,7 @@ h2 {
 
 .visContainer {
     width: 100%;
-    padding: 10px;
+    padding: 0px;
 }
 
 .buttonGroup {

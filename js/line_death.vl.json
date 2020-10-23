@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "COVID-19 Deaths Numbers",
+  "title": "COVID-19 Deaths",
   "data": {
     "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/TenCountry.csv"
   },
@@ -18,7 +18,7 @@
       "aggregate": "sum",
       "field": "Deaths",
       "type": "quantitative",
-      "title": "Deaths Number",
+      "title": "Deaths",
       "axis": {"tickCount": 3}
     }
   },
@@ -71,7 +71,7 @@
         "tooltip": [
           {"field": "Country/Region", "type": "nominal", "title": "Country"},
           {"field": "Date", "type": "temporal"},
-          {"field": "Deaths", "type": "quantitative", "title": "Deaths Numbers"}
+          {"field": "Deaths", "type": "quantitative", "title": "Deaths"}
         ]
       }
     },
@@ -99,7 +99,7 @@
         "tooltip": [
           {"field": "Country/Region", "type": "nominal", "title": "Country"},
           {"field": "Date", "type": "temporal"},
-          {"field": "Deaths", "type": "quantitative", "title": "Deaths Numbers"}
+          {"field": "Deaths", "type": "quantitative", "title": "Deaths"}
         ]
       }
     }

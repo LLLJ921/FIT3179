@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Gender Balance",
+  "title": "Gender Balance on Confirmed Case",
   "padding": {"left": 50, "top": 5, "right": 50, "bottom": 5},
   "width":200,
   "height": 300,

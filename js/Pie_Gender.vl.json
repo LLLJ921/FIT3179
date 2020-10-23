@@ -1,41 +1,74 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Gender Balance on Confirmed Case",
+  "title": "Gender Balance on Confirmed Cases & Deaths",
   "padding": {"left": 50, "top": 5, "right": 50, "bottom": 5},
-  "width":200,
-  "height": 300,
-  "data": {"url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/donut.csv"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/donut.csv"
+  },
   "params": [
-    { 
-      "name": "Month_selection", 
+    {
+      "name": "Month_selection",
       "value": 2,
-      "bind": { 
-        "input": "range", 
+      "bind": {
+        "input": "range",
         "min": 2,
         "max": 10,
         "step": 1,
         "name": "Month: "
-      } 
+      }
     }
   ],
-  "transform": [
-    {"filter": "datum.MonthID == Month_selection"}
-  ],
-  "mark": {"type": "arc", "innerRadius": 50},
-  "encoding": {
-    "theta": {"field": "PercentageFull", "type": "quantitative"},
-    "color": {
-      "field": "Gender", 
-      "type": "nominal",
-      "scale": {
-        "domain": ["Female", "Male"],
-        "range": ["#ef6548", "#3690c0"]
-      }
-    },
+  "transform": [{"filter": "datum.MonthID == Month_selection"}],
+  "hconcat": [
+    {
+      "width": 200,
+      "height": 300,
+      "mark": {"type": "arc", "innerRadius": 50},
+      "encoding": {
+        "theta": {"field": "PercentageFullC", "type": "quantitative"},
+        "color": {
+          "field": "Gender",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Female", "Male"],
+            "range": ["#ef6548", "#3690c0"]
+          }
+        },
         "tooltip": [
-            {"field": "Gender", "type": "nominal"},
-            {"field": "PercentageFull", "type": "quantitative", "format": ".2f", "title": "Percentage (%)"}
+          {"field": "Gender", "type": "nominal"},
+          {
+            "field": "PercentageFullC",
+            "type": "quantitative",
+            "format": ".2f",
+            "title": "Percentage (%)"
+          }
         ]
-  },
-  "view": {"stroke": null}
+      },
+      "view": {"stroke": null}
+    },
+    {
+      "mark": {"type": "arc", "innerRadius": 50},
+      "encoding": {
+        "theta": {"field": "PercentageFullD", "type": "quantitative"},
+        "color": {
+          "field": "Gender",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Female", "Male"],
+            "range": ["#ef6548", "#3690c0"]
+          }
+        },
+        "tooltip": [
+          {"field": "Gender", "type": "nominal"},
+          {
+            "field": "PercentageFullD",
+            "type": "quantitative",
+            "format": ".2f",
+            "title": "Percentage (%)"
+          }
+        ]
+      },
+      "view": {"stroke": null}
+    }
+  ]
 }

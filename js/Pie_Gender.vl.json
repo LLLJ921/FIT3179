@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Gender Balance on Confirmed Cases & Deaths",
-  "padding": {"left": 50, "top": 5, "right": 50, "bottom": 5},
+  "title": "Gender Balance on Confirmed Cases (Left) and Deaths (Right)",
+  "padding": {"left": 0, "top": 0, "right": 0, "bottom": 30},
   "data": {
     "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/donut.csv"
   },
@@ -21,8 +21,8 @@
   "transform": [{"filter": "datum.MonthID == Month_selection"}],
   "hconcat": [
     {
-      "width": 200,
-      "height": 300,
+      "width": 300,
+      "height": 250,
       "mark": {"type": "arc", "innerRadius": 50},
       "encoding": {
         "theta": {"field": "PercentageFullC", "type": "quantitative"},
@@ -47,6 +47,8 @@
       "view": {"stroke": null}
     },
     {
+      "width": 200,
+      "height": 250,
       "mark": {"type": "arc", "innerRadius": 50},
       "encoding": {
         "theta": {"field": "PercentageFullD", "type": "quantitative"},

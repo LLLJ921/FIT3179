@@ -178,7 +178,7 @@ function lineDeath() {
     }
 }
 
-function startFunction{
+function startFunction(){
     changeMonthName(document.querySelectorAll('.slider .vega-bind span')[1]);
     changeMonthName(document.querySelectorAll('.slider .vega-bind span')[3]);
     changeMonthName(document.querySelectorAll('.slider .vega-bind span')[5]);

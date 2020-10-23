@@ -23,8 +23,8 @@
           "bind": "legend"
         }
       },
-      "width": 200,
-      "height": 200,
+      "width": 400,
+      "height": 400,
       "data": {
         "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/donut.csv"
       },
@@ -57,8 +57,8 @@
       "view": {"stroke": null}
     },
     {
-      "width": 300,
-      "height": 200,
+      "width": 400,
+      "height": 400,
       "data": {
         "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/male_vs_female.csv"
       },

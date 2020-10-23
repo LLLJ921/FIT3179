@@ -1,6 +1,10 @@
-var spec1 = "https://clairpan.github.io/FIT3179/js/mapConfirmed.vl.json";
-var spec2 = "https://clairpan.github.io/FIT3179/js/mapActive.vl.json";
-var spec3 = "https://clairpan.github.io/FIT3179/js/mapTotalTest.vl.json";
+var spec1 = "https://clairpan.github.io/FIT3179/js/map_Confirmed.vl.json";
+var spec2 = "https://clairpan.github.io/FIT3179/js/map_Active.vl.json";
+var spec3 = "https://clairpan.github.io/FIT3179/js/map_TotalTest.vl.json";
+
+var spec4 = "https://clairpan.github.io/FIT3179/js/line_Confirmed.vl.json";
+var spec5 = "https://clairpan.github.io/FIT3179/js/line_active.vl.json";
+var spec6 = "https://clairpan.github.io/FIT3179/js/line_death.vl.json";
 
 vegaEmbed('#mapConfirmed', spec1).then(function(result) {
   // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -12,6 +16,18 @@ vegaEmbed('#mapActive', spec2).then(function(result) {
 
 vegaEmbed('#mapTotalTest', spec3).then(function(result) {
   // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+
+vegaEmbed('#lineConfirmed', spec4).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+
+vegaEmbed('#lineActive', spec5).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+
+vegaEmbed('#lineDeath', spec6).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
 function mapConfirmed() {
@@ -86,4 +102,78 @@ function mapTest() {
     aButton.classList.add('pure-button-primary');
     tButton.classList.add('button-success');
   }
+}
+
+function lineConfirmed() {
+    var c = document.getElementById("lineConfirmed");
+    var a = document.getElementById("lineActive");
+    var t = document.getElementById("lineDeath");
+
+    var cButton = document.getElementById("buttonLineConfirmed");
+    var aButton = document.getElementById("buttonLineActive");
+    var tButton = document.getElementById("buttonLineTotalTest");
+    if (c.style.display === "none") {
+        c.style.display = "block";
+        a.style.display = "none";
+        t.style.display = "none";
+        cButton.classList.remove('pure-button-primary');
+        aButton.classList.remove('pure-button-primary');
+        tButton.classList.remove('pure-button-primary');
+        cButton.classList.remove('button-success');
+        aButton.classList.remove('button-success');
+        tButton.classList.remove('button-success');
+        cButton.classList.add('button-success');
+        aButton.classList.add('pure-button-primary');
+        tButton.classList.add('pure-button-primary');
+    }
+}
+
+function lineActive() {
+    var c = document.getElementById("lineConfirmed");
+    var a = document.getElementById("lineActive");
+    var t = document.getElementById("lineDeath");
+
+    var cButton = document.getElementById("buttonLineConfirmed");
+    var aButton = document.getElementById("buttonLineActive");
+    var tButton = document.getElementById("buttonLineTotalTest");
+
+    if (a.style.display === "none") {
+        c.style.display = "none";
+        a.style.display = "block";
+        t.style.display = "none";
+        cButton.classList.remove('pure-button-primary');
+        aButton.classList.remove('pure-button-primary');
+        tButton.classList.remove('pure-button-primary');
+        cButton.classList.remove('button-success');
+        aButton.classList.remove('button-success');
+        tButton.classList.remove('button-success');
+        cButton.classList.add('pure-button-primary');
+        aButton.classList.add('button-success');
+        tButton.classList.add('pure-button-primary');
+    }
+}
+
+function lineDeath() {
+    var c = document.getElementById("lineConfirmed");
+    var a = document.getElementById("lineActive");
+    var t = document.getElementById("lineDeath");
+
+    var cButton = document.getElementById("buttonLineConfirmed");
+    var aButton = document.getElementById("buttonLineActive");
+    var tButton = document.getElementById("buttonLineTotalTest");
+
+    if (t.style.display === "none") {
+        c.style.display = "none";
+        a.style.display = "none";
+        t.style.display = "block";
+        cButton.classList.remove('pure-button-primary');
+        aButton.classList.remove('pure-button-primary');
+        tButton.classList.remove('pure-button-primary');
+        cButton.classList.remove('button-success');
+        aButton.classList.remove('button-success');
+        tButton.classList.remove('button-success');
+        cButton.classList.add('pure-button-primary');
+        aButton.classList.add('pure-button-primary');
+        tButton.classList.add('button-success');
+    }
 }

@@ -1,11 +1,24 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "title": "COVID-19 Active Case by State",
-    "width": 1000,
-    "height": 600,
+    "width": 500,
+    "height": 300,
     "data": {
       "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/Aus_Month_confirmed.csv"
     },
+    "params": [
+      { 
+        "name": "Month_selection", 
+        "value": 2,
+        "bind": { 
+          "input": "range", 
+          "min": 2,
+          "max": 10,
+          "step": 1,
+          "name": "Month: " 
+        } 
+      }
+    ],
     "mark": {"type": "geoshape", "stroke": "white"},
     "projection": {"type": "equirectangular"},
     "encoding": {
@@ -16,6 +29,7 @@
           },
         "color": {
             "field": "Active per million population",
+            "title": "Active Cases/Million",
             "type": "quantitative",
             "scale": {
                 "type": "threshold",
@@ -25,8 +39,8 @@
         },
         "tooltip": [
             {"field": "State", "type": "nominal"},
-            {"field": "Active", "type": "quantitative"},
-            {"field": "Active per million population", "type": "quantitative", "format": ".2f"}
+            {"field": "Active", "type": "quantitative", "title":"Active Cases"},
+            {"field": "Active per million population", "type": "quantitative", "format": ".2f", "title": "Active Cases per Million"}
         ]
     },
     "transform": [
@@ -52,29 +66,9 @@
         }
       },
       {"calculate": "datum.Active/datum.Population * 1000000", "as": "Active per million population"},
-      {"filter": {"selection": "month"}}
+      {"filter": "datum.MonthID == Month_selection"}
     ],
     "selection": {
-      "month": {
-        "type": "single",
-        "fields": ["Month"],
-        "bind": {
-          "input": "radio",
-          "options": [
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October"
-          ],
-          "name": "Month: "
-        },
-        "init": {"Month": "October"}
-      },
       "highlight": {"type": "single", "empty": "none", "on": "mouseover"},
       "select": {"type": "multi"}
     }

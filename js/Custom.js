@@ -185,32 +185,32 @@ function startFunction(){
 }
 
 function changeMonthName(e) {
-    switch (e) {
-        case 2:
+    switch (e.innerText) {
+        case "2":
             e.innerText = "February";
             break;
-        case 3:
+        case "3":
             e.innerText = "March";
             break;
-        case 4:
+        case "4":
             e.innerText = "April";
             break;
-        case 5:
+        case "5":
             e.innerText = "May";
             break;
-        case 6:
+        case "6":
             e.innerText = "June";
             break;
-        case 7:
+        case "7":
             e.innerText = "July";
             break;
-        case 8:
+        case "8":
             e.innerText = "August";
             break;
-        case 9:
+        case "9":
             e.innerText = "Sepetember";
             break;
-        case 10:
+        case "10":
             e.innerText = "October";
     }
 }

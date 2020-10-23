@@ -185,6 +185,9 @@ setTimeout(function () {
 }, 3000);
 
 function changeMonthName(e) {
+    if (e.innerText == "2") {
+        e.innerHTML = "February";
+    }
     switch (e.innerText) {
         case 2:
             e.innerHTML = "February";

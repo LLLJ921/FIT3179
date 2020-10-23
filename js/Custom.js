@@ -178,17 +178,15 @@ function lineDeath() {
     }
 }
 
+document.querySelectorAll('.slider .vega-bind span')[1].onchange = function () { changeMonthName(document.querySelectorAll('.slider .vega-bind span')[1]); };
+document.querySelectorAll('.slider .vega-bind span')[3].onchange = function () { changeMonthName(document.querySelectorAll('.slider .vega-bind span')[3]); };
+document.querySelectorAll('.slider .vega-bind span')[5].onchange = function () { changeMonthName(document.querySelectorAll('.slider .vega-bind span')[5]); };
+
 setTimeout(function () {
-    document.querySelectorAll('.slider .vega-bind span')[1].bind('DOMSubtreeModified', function () {
-        changeMonthName(document.querySelectorAll('.slider .vega-bind span')[1]);
-    });
-    document.querySelectorAll('.slider .vega-bind span')[3].bind('DOMSubtreeModified', function () {
-        changeMonthName(document.querySelectorAll('.slider .vega-bind span')[3]);
-    });
-    document.querySelectorAll('.slider .vega-bind span')[5].bind('DOMSubtreeModified', function () {
-        changeMonthName(document.querySelectorAll('.slider .vega-bind span')[5]);
-    });
-}, 1000);
+    changeMonthName(document.querySelectorAll('.slider .vega-bind span')[1]);
+    changeMonthName(document.querySelectorAll('.slider .vega-bind span')[3]);
+    changeMonthName(document.querySelectorAll('.slider .vega-bind span')[5]);
+}, 500);
 
 function changeMonthName(e) {
     if (e.innerText == "2") {

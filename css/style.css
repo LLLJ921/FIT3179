@@ -2,8 +2,23 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    background-color: #f2f4f4;
+    overflow-x: hidden;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
 .header h1 {
     font-family: 'Playfair Display SC', serif;
+}
+
+h2 {
+    padding: 3px 10px;
+    border-left: .2rem solid #63b6f6;
+    border-bottom: 1px solid #efefef;
+    position: relative;
 }
 
 .page {
@@ -16,6 +31,20 @@
 
 .pure-g {
     margin-bottom: 25px;
+}
+
+.row {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    padding: .6rem;
+    margin: 10px 0;
 }
 
 .header {

@@ -21,14 +21,6 @@
   },
   "layer": [
     {
-      "selection": {
-        "grid": {"type": "interval", "bind": "scales"},
-        "country_highlight": {
-          "type": "multi",
-          "fields": ["Country/Region"],
-          "bind": "legend"
-        }
-      },
       "mark": {"type": "line", "interpolate": "monotone"},
       "encoding": {
         "color": {
@@ -48,21 +40,21 @@
               "United Kingdom" 
             ], 
             "range": [
-               "#de2d26", 
-               "#beaed4", 
-               "#fdc086", 
-               "#fb9a99", 
-               "#386cb0", 
-               "#1b9e77", 
-               "#7fc97f", 
-               "#7570b3", 
-               "#e7298a", 
-               "#66a61e" 
+              "#de2d26", 
+              "#beaed4", 
+              "#fdc086", 
+              "#fb9a99", 
+              "#386cb0", 
+              "#1b9e77", 
+              "#7fc97f", 
+              "#7570b3", 
+              "#e7298a", 
+              "#66a61e" 
             ]
           }
         },
         "opacity": {
-          "condition": [{"selection": "country_highlight", "value": 0.8}],
+          "condition": [{"test": "datum['Country/Region'] == 'Australia'", "value": 0.8}],
           "value": 0.2
         },
         "tooltip": [
@@ -94,7 +86,7 @@
         "opacity": {
           "condition":  [
             {
-              "selection": "country_highlight", 
+              "test": "datum['Country/Region'] == 'Australia'", 
               "value": 0.8
             }
           ],

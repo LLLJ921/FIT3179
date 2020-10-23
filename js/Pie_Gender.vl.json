@@ -21,7 +21,7 @@
   "transform": [{"filter": "datum.MonthID == Month_selection"}],
   "hconcat": [
     {
-      "width": 300,
+      "width": 250,
       "height": 250,
       "mark": {"type": "arc", "innerRadius": 50},
       "encoding": {
@@ -47,7 +47,7 @@
       "view": {"stroke": null}
     },
     {
-      "width": 200,
+      "width": 250,
       "height": 250,
       "mark": {"type": "arc", "innerRadius": 50},
       "encoding": {

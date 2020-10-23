@@ -6,7 +6,8 @@ var spec4 = "https://clairpan.github.io/FIT3179/js/line_Confirmed.vl.json";
 var spec5 = "https://clairpan.github.io/FIT3179/js/line_active.vl.json";
 var spec6 = "https://clairpan.github.io/FIT3179/js/line_death.vl.json";
 
-var spec7 = "https://clairpan.github.io/FIT3179/js/genderGroupCharts.vl.json";
+var spec7 = "https://clairpan.github.io/FIT3179/js/Pie_Gender.vl.json";
+var spec8 = "https://clairpan.github.io/FIT3179/js/ConnectedDot_Probability.vl.json";
 
 vegaEmbed('#mapConfirmed', spec1).then(function(result) {
   // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -32,7 +33,11 @@ vegaEmbed('#lineDeath', spec6).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
-vegaEmbed('#genderGroup', spec7).then(function (result) {
+vegaEmbed('#genderPie', spec7).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+
+vegaEmbed('#genderCDot', spec8).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 

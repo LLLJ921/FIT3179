@@ -9,6 +9,8 @@ var spec6 = "https://clairpan.github.io/FIT3179/js/line_death.vl.json";
 var spec7 = "https://clairpan.github.io/FIT3179/js/Pie_Gender.vl.json";
 var spec8 = "https://clairpan.github.io/FIT3179/js/ConnectedDot_Probability.vl.json";
 
+var spec9 = "https://clairpan.github.io/FIT3179/js/WordCloud.json";
+
 vegaEmbed('#mapConfirmed', spec1).then(function(result) {
   // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
@@ -38,6 +40,10 @@ vegaEmbed('#genderPie', spec7).then(function (result) {
 }).catch(console.error);
 
 vegaEmbed('#genderCDot', spec8).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+
+vegaEmbed('#wordCloud', spec9).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 

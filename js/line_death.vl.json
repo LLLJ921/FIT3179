@@ -23,6 +23,11 @@
   },
   "layer":[
     {
+	  "selection": {
+        "grid": {
+          "type": "interval", "bind": "scales"
+        } 
+      },
       "mark": {
         "type": "line",
         "interpolate": "monotone"

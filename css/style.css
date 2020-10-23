@@ -29,10 +29,6 @@ h2 {
     padding-top: 0px;
 }
 
-.pure-g {
-    margin-bottom: 25px;
-}
-
 .row {
     position: relative;
     display: flex;
@@ -45,6 +41,10 @@ h2 {
     border-radius: .25rem;
     padding: .6rem;
     margin: 10px 0;
+}
+
+.row h2 {
+    letter-spacing: normal;
 }
 
 .header {

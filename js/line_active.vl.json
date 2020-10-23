@@ -1,0 +1,109 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "COVID-19 Active Case",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/fullWorldCOVID.csv"
+  },
+  "width": 500,
+  "height": 300,
+  "transform": [],
+  "encoding": {
+    "x": {
+      "timeUnit": "monthdate",
+      "field": "Date",
+      "title": "",
+      "axis": {"grid": false}
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "Active",
+      "type": "quantitative",
+      "title": "Active Cases (square-root scale)",
+      "scale": {"type": "sqrt"},
+      "axis": {"tickCount": 5}
+    }
+  },
+  "layer": [
+    {
+      "selection": {
+        "grid": {"type": "interval", "bind": "scales"},
+        "country_highlight": {
+          "type": "multi",
+          "fields": ["Country/Region"],
+          "bind": "legend"
+        }
+      },
+      "mark": {"type": "line", "interpolate": "monotone"},
+      "encoding": {
+        "color": {
+          "field": "Country/Region",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Australia",
+              "Canada",
+              "China",
+              "France",
+              "India",
+              "Italy",
+              "New Zealand",
+              "Russia",
+              "US",
+              "United Kingdom"
+            ],
+            "range": [
+              "#7fc97f",
+              "#beaed4",
+              "#fdc086",
+              "#fb9a99",
+              "#386cb0",
+              "#1b9e77",
+              "#d95f02",
+              "#7570b3",
+              "#e7298a",
+              "#66a61e"
+            ]
+          }
+        },
+        "opacity": {
+          "condition": [{"selection": "country_highlight", "value": 0.8}],
+          "value": 0.2
+        },
+        "tooltip": [
+          {"field": "Country/Region", "type": "nominal", "title": "Country"},
+          {"field": "Date", "type": "temporal"},
+          {"field": "Active", "type": "quantitative", "title": "Active Cases"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "(datum['Country/Region'] == 'China' && datum['Date'] == 1582635600000) || (datum['Country/Region'] == 'Australia' && datum['Date'] == 1593871200000) || (datum['Country/Region'] == 'US' && datum['Date'] == 1592143200000) || (datum['Country/Region'] == 'Russia' && datum['Date'] == 1589983200000)"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "dy": -12,
+        "fontSize": 14,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "Country/Region", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": [{"selection": "country_highlight", "value": 0.8}],
+          "value": 0.2
+        },
+        "tooltip": [
+          {"field": "Country/Region", "type": "nominal", "title": "Country"},
+          {"field": "Date", "type": "temporal"},
+          {"field": "Active", "type": "quantitative", "title": "Active Cases"}
+        ]
+      }
+    }
+  ],
+  "config": {}
+}

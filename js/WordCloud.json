@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "description": "A word cloud visualization depicting Vega research paper abstracts.",
-  "width": 400,
-  "height": 250,
+  "width": 450,
+  "height": 300,
   "padding": 0,
   "data": [
     {
@@ -83,7 +83,7 @@
           "font": "Helvetica Neue, Arial",
           "fontSize": {"field": "datum.count"},
           "fontWeight": {"field": "datum.weight"},
-          "fontSizeRange": [12, 56],
+          "fontSizeRange": [10, 40],
           "padding": 2
         }
       ]

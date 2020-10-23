@@ -36,6 +36,7 @@
         "color": {
           "field": "Country/Region", 
           "type": "nominal",
+		  "title": "Country",
           "scale": {
             "domain": [ 
               "Australia", 

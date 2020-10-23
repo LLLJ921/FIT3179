@@ -15,10 +15,12 @@ body {
 }
 
 h2 {
+    letter-spacing: normal;
     padding: 3px 10px;
     border-left: .2rem solid #63b6f6;
     border-bottom: 1px solid #efefef;
     position: relative;
+    width: 100%;
 }
 
 .page {
@@ -43,9 +45,6 @@ h2 {
     margin: 10px 0;
 }
 
-.row h2 {
-    letter-spacing: normal;
-}
 
 .header {
     position: relative;

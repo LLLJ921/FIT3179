@@ -178,11 +178,12 @@ function lineDeath() {
     }
 }
 
-function startFunction(){
+document.addEventListener('DOMContentLoaded', function () {
     changeMonthName(document.querySelectorAll('.slider .vega-bind span')[1]);
     changeMonthName(document.querySelectorAll('.slider .vega-bind span')[3]);
     changeMonthName(document.querySelectorAll('.slider .vega-bind span')[5]);
-}
+}, false);
+
 
 function changeMonthName(e) {
     console.log(e);

@@ -187,35 +187,22 @@ setTimeout(function () {
 function changeMonthName(e) {
     if (e.innerText == "2") {
         e.innerHTML = "February";
-    }
-    switch (e.innerText) {
-        case 2:
-            e.innerHTML = "February";
-            break;
-        case "3":
-            console.log("3");
-            e.innerHTML = "March";
-            break;
-        case "4":
-            e.innerHTML = "April";
-            break;
-        case "5":
-            e.innerHTML = "May";
-            break;
-        case "6":
-            e.innerHTML = "June";
-            break;
-        case "7":
-            e.innerHTML = "July";
-            break;
-        case "8":
-            e.innerHTML = "August";
-            break;
-        case "9":
-            e.innerHTML = "Sepetember";
-            break;
-        case "10":
-            e.innerHTML = "October";
+    } else if (e.innerText == "3") {
+        e.innerHTML = "March";
+    } else if (e.innerText == "4") {
+        e.innerHTML = "April";
+    } else if (e.innerText == "5") {
+        e.innerHTML = "May";
+    } else if (e.innerText == "6") {
+        e.innerHTML = "June";
+    } else if (e.innerText == "7") {
+        e.innerHTML = "July";
+    } else if (e.innerText == "8") {
+        e.innerHTML = "August";
+    } else if (e.innerText == "9") {
+        e.innerHTML = "Sepetember";
+    } else if (e.innerText == "10") {
+        e.innerHTML = "October";
     }
 }
 

@@ -63,7 +63,7 @@
           {
             "field": "Probability",
             "type": "quantitative",
-            "format": ".2f",
+             "axis": {"format": "%"},
             "title": "Probability of Infection (%)"
           }
         ]

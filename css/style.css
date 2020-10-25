@@ -131,8 +131,8 @@ h2 {
     background-size: 100%;
     background-repeat: no-repeat;
     z-index: -1;
-    -webkit-filter: brightness(.6);
-    filter: brightness(.6);
+    -webkit-filter: brightness(.8);
+    filter: brightness(.8);
 }
 
 .slogan {

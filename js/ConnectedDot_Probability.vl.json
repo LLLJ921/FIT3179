@@ -3,55 +3,45 @@
   "title": "Probability of Infection by Age Groups",
   "width": 450,
   "height": 300,
-  "data": {"url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/male_vs_female.csv"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/male_vs_female.csv"
+  },
   "encoding": {
     "x": {
       "field": "Probability",
       "type": "quantitative",
-      "title": "Probability of Infection (%)"
+      "axis": {"format": "%"},
+      "title": "Probability of Infection"
     },
     "y": {
       "field": "AGE_GROUP",
       "type": "nominal",
       "sort": "descending",
       "title": "Age Group",
-      "axis": {
-        "offset": 5,
-        "ticks": false,
-        "minExtent": 70,
-        "domain": false
-      }
+      "axis": {"offset": 5, "ticks": false, "minExtent": 70, "domain": false}
     }
   },
   "transform": [
-    {"calculate": "datum.Probability_of_infection * 100", "as": "Probability"}
+    {"calculate": "datum.Probability_of_infection", "as": "Probability"}
   ],
   "layer": [
     {
       "mark": "line",
       "encoding": {
-        "detail": {
-          "field": "AGE_GROUP",
-          "type": "nominal"
-        },
+        "detail": {"field": "AGE_GROUP", "type": "nominal"},
         "color": {"value": "#grey"}
       }
     },
     {
       "selection": {
-        "grid": {
-          "type": "interval", "bind": "scales"
-        },
-        "continent_highlight": { 
-          "type": "single", 
-          "fields": ["Gender"], 
-          "bind": "legend" 
-        } 
+        "grid": {"type": "interval", "bind": "scales"},
+        "continent_highlight": {
+          "type": "single",
+          "fields": ["Gender"],
+          "bind": "legend"
+        }
       },
-      "mark": {
-        "type": "point",
-        "filled": true
-      },
+      "mark": {"type": "point", "filled": true},
       "encoding": {
         "color": {
           "field": "Gender",
@@ -63,18 +53,22 @@
           "title": "Gender"
         },
         "size": {"value": 100},
-        "opacity": { 
-          "condition": {
-            "selection": "continent_highlight", "value": 1
-          }, 
+        "opacity": {
+          "condition": {"selection": "continent_highlight", "value": 1},
           "value": 0.2
         },
         "tooltip": [
-            {"field": "AGE_GROUP", "type": "nominal", "title": "Age Group"},
-            {"field": "Gender", "type": "nominal"},
-            {"field": "Probability", "type": "quantitative", "format": ".2f", "title": "Probability of Infection (%)"}
+          {"field": "AGE_GROUP", "type": "nominal", "title": "Age Group"},
+          {"field": "Gender", "type": "nominal"},
+          {
+            "field": "Probability",
+            "type": "quantitative",
+            "format": ".2f",
+            "title": "Probability of Infection (%)"
+          }
         ]
       }
     }
-  ]
+  ],
+  "config": {}
 }

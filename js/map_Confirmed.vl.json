@@ -1,75 +1,107 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "title": "COVID-19 Confirmed Case by State (Monthly)",
-    "width": 470,
-    "height": 300,
-    "data": {
-      "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/Aus_Month_confirmed.csv"
-    },
-    "params": [
-      { 
-        "name": "Month_selection", 
-        "value": 2,
-        "bind": { 
-          "input": "range", 
-          "min": 2,
-          "max": 10,
-          "step": 1,
-          "name": "Month: "
-        } 
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "COVID-19 Confirmed Case by State (Monthly)",
+  "width": 470,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/Aus_Month_confirmed.csv"
+  },
+  "params": [
+    {
+      "name": "Month_selection",
+      "value": 2,
+      "bind": {
+        "input": "range",
+        "min": 2,
+        "max": 10,
+        "step": 1,
+        "name": "Month: "
       }
-    ],
-    "mark": {"type": "geoshape", "stroke": "white"},
-    "projection": {"type": "equirectangular"},
-    "encoding": {
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "geoshape", "stroke": "white"},
+      "projection": {"type": "equirectangular"},
+      "encoding": {
         "shape": {"field": "geo", "type": "geojson"},
         "fillOpacity": {
-            "condition": {"selection": "select", "value": 1},
-            "value": 0.3
-          },
+          "condition": {"selection": "select", "value": 1},
+          "value": 0.3
+        },
         "color": {
-            "field": "Confirmed per million population",
-            "type": "quantitative",
-            "title": "Confirmed Cases / M",
-            "scale": {
-                "type": "threshold",
-                "domain": [1, 10, 100, 1000],
-                "range": ["#fee5d9", "#fcae91", "#fb6a4a", "#de2d26", "#a50f15"]
-                }
+          "field": "Confirmed per million population",
+          "type": "quantitative",
+          "title": "Confirmed Cases / M",
+          "scale": {
+            "type": "threshold",
+            "domain": [1, 10, 100, 1000],
+            "range": ["#fee5d9", "#fcae91", "#fb6a4a", "#de2d26", "#a50f15"]
+          }
         },
         "tooltip": [
-            {"field": "State", "type": "nominal"},
-            {"field": "Confirmed", "type": "quantitative", "title": "Confirmed Cases"},
-            {"field": "Confirmed per million population", "type": "quantitative", "format": ".2f", "title": "Confirmed Cases per Million"}
+          {"field": "State", "type": "nominal"},
+          {
+            "field": "Confirmed",
+            "type": "quantitative",
+            "title": "Confirmed Cases"
+          },
+          {
+            "field": "Confirmed per million population",
+            "type": "quantitative",
+            "format": ".2f",
+            "title": "Confirmed Cases per Million"
+          }
         ]
-    },
-    "transform": [
-      {
-        "lookup": "State",
-        "from": {
-          "data": {
-            "url": "https://clairpan.github.io/FIT3179/data/Aus_State_Simplified.json",
-            "format": {"type": "topojson", "feature": "STE_2016_AUST"}
+      },
+      "transform": [
+        {
+          "lookup": "State",
+          "from": {
+            "data": {
+              "url": "https://clairpan.github.io/FIT3179/data/Aus_State_Simplified.json",
+              "format": {"type": "topojson", "feature": "STE_2016_AUST"}
+            },
+            "key": "properties.STE_NAME16"
           },
-          "key": "properties.STE_NAME16"
+          "as": "geo"
         },
-        "as": "geo"
-      },
-      {
-        "lookup": "State",
-        "from": {
-          "data": {
-            "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/AustralianPopulation.csv"
-          },
-          "key": "State",
-          "fields": ["Population"]
+        {
+          "lookup": "State",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/AustralianPopulation.csv"
+            },
+            "key": "State",
+            "fields": ["Population"]
+          }
+        },
+        {
+          "calculate": "datum.Confirmed/datum.Population * 1000000",
+          "as": "Confirmed per million population"
+        },
+        {"filter": "datum.MonthID == Month_selection"}
+      ],
+      "selection": {
+        "highlight": {"type": "single", "empty": "none", "on": "mouseover"},
+        "select": {"type": "multi"}
+      }
+    },
+    {
+      "mark": {"type": "text", "fontSize": 40},
+      "encoding": {
+        "text": {"field": "Month", "type": "nominal"},
+        "opacity": {
+          "condition": [
+            {
+              "test": "datum.MonthID == Month_selection && datum.State == 'Victoria'",
+              "value": 0.3
+            }
+          ],
+          "value": 0
         }
-      },
-      {"calculate": "datum.Confirmed/datum.Population * 1000000", "as": "Confirmed per million population"},
-      {"filter": "datum.MonthID == Month_selection"}
-    ],
-    "selection": {
-      "highlight": {"type": "single", "empty": "none", "on": "mouseover"},
-      "select": {"type": "multi"}
+      }
     }
-  }
+  ],
+  "config": {}
+}

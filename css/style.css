@@ -63,6 +63,11 @@ h2 {
     border-radius: 5px;
 }
 
+.pure-button-primary, .pure-button-selected, a.pure-button-primary, a.pure-button-selected {
+    background-color: #3690c0;
+    color: #fff;
+}
+
 .button-success,
 .button-error,
 .button-warning,

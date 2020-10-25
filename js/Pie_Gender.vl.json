@@ -23,54 +23,179 @@
     {
       "width": 250,
       "height": 250,
-      "mark": {"type": "arc", "innerRadius": 50},
-      "encoding": {
-        "theta": {"field": "PercentageFullC", "type": "quantitative"},
-        "color": {
-          "field": "Gender",
-          "type": "nominal",
-          "scale": {
-            "domain": ["Female", "Male"],
-            "range": ["#ef6548", "#3690c0"]
+      "layer": [
+        {
+          "mark": {"type": "arc", "innerRadius": 75, "outerRadius": 100},
+          "encoding": {
+            "theta": {"field": "PercentageFullC", "type": "quantitative"},
+            "color": {
+              "field": "Gender",
+              "type": "nominal",
+              "scale": {
+                "domain": ["Female", "Male"],
+                "range": ["#ef6548", "#3690c0"]
+              }
+            },
+            "tooltip": [
+              {"field": "Gender", "type": "nominal"},
+              {
+                "field": "RealValueC",
+                "type": "quantitative",
+                "title": "Comfirmed Cases"
+              }
+            ]
+          },
+          "view": {"stroke": null}
+        },
+        {
+          "mark": {"type": "text", "fontSize": 26},
+          "encoding": {
+            "text": {"field": "Month", "type": "nominal"},
+            "opacity": {
+              "condition": [{"test": "datum['Gender'] == 'Male'", "value": 1}],
+              "value": 0
+            }
           }
         },
-        "tooltip": [
-          {"field": "Gender", "type": "nominal"},
-          {
-            "field": "PercentageFullC",
-            "type": "quantitative",
-            "format": ".2f",
-            "title": "Percentage (%)"
+        {
+          "transform": [{"filter": "datum['Gender'] == 'Female'"}],
+          "mark": {"type": "text", "fontSize": 18, "dy": -95, "dx": 80},
+          "encoding": {
+            "text": {
+              "field": "PercentageC",
+              "type": "nominal",
+              "format": ".0%"
+            },
+            "theta": {"field": "PercentageFullC", "type": "quantitative"},
+            "color": {
+              "field": "Gender",
+              "type": "nominal",
+              "scale": {
+                "domain": ["Female", "Male"],
+                "range": ["#ef6548", "#3690c0"]
+              }
+            },
+            "tooltip": [
+              {"field": "Gender", "type": "nominal"},
+              {
+                "field": "RealValueC",
+                "type": "quantitative",
+                "title": "Comfirmed Cases"
+              }
+            ]
           }
-        ]
-      },
-      "view": {"stroke": null}
+        },
+        {
+          "transform": [{"filter": "datum['Gender'] == 'Male'"}],
+          "mark": {"type": "text", "fontSize": 18, "dy": -95, "dx": -80},
+          "encoding": {
+            "text": {
+              "field": "PercentageC",
+              "type": "nominal",
+              "format": ".0%"
+            },
+            "theta": {"field": "PercentageFullC", "type": "quantitative"},
+            "color": {
+              "field": "Gender",
+              "type": "nominal",
+              "scale": {
+                "domain": ["Female", "Male"],
+                "range": ["#ef6548", "#3690c0"]
+              }
+            },
+            "tooltip": [
+              {"field": "Gender", "type": "nominal"},
+              {
+                "field": "RealValueC",
+                "type": "quantitative",
+                "title": "Comfirmed Cases"
+              }
+            ]
+          }
+        }
+      ]
     },
     {
       "width": 250,
       "height": 250,
-      "mark": {"type": "arc", "innerRadius": 50},
-      "encoding": {
-        "theta": {"field": "PercentageFullD", "type": "quantitative"},
-        "color": {
-          "field": "Gender",
-          "type": "nominal",
-          "scale": {
-            "domain": ["Female", "Male"],
-            "range": ["#ef6548", "#3690c0"]
+      "layer": [
+        {
+          "mark": {"type": "arc", "innerRadius": 75, "outerRadius": 100},
+          "encoding": {
+            "theta": {"field": "PercentageFullD", "type": "quantitative"},
+            "color": {
+              "field": "Gender",
+              "type": "nominal",
+              "scale": {
+                "domain": ["Female", "Male"],
+                "range": ["#ef6548", "#3690c0"]
+              }
+            },
+            "tooltip": [
+              {"field": "Gender", "type": "nominal"},
+              {"field": "RealValueD", "type": "quantitative", "title": "Deaths"}
+            ]
+          },
+          "view": {"stroke": null}
+        },
+        {
+          "mark": {"type": "text", "fontSize": 26},
+          "encoding": {
+            "text": {"field": "Month", "type": "nominal"},
+            "opacity": {
+              "condition": [{"test": "datum['Gender'] == 'Male'", "value": 1}],
+              "value": 0
+            }
           }
         },
-        "tooltip": [
-          {"field": "Gender", "type": "nominal"},
-          {
-            "field": "PercentageFullD",
-            "type": "quantitative",
-            "format": ".2f",
-            "title": "Percentage (%)"
+        {
+          "transform": [{"filter": "datum['Gender'] == 'Female'"}],
+          "mark": {"type": "text", "fontSize": 18, "dy": -95, "dx": 80},
+          "encoding": {
+            "text": {
+              "field": "PercentageD",
+              "type": "nominal",
+              "format": ".0%"
+            },
+            "color": {
+              "field": "Gender",
+              "type": "nominal",
+              "scale": {
+                "domain": ["Female", "Male"],
+                "range": ["#ef6548", "#3690c0"]
+              }
+            },
+            "tooltip": [
+              {"field": "Gender", "type": "nominal"},
+              {"field": "RealValueD", "type": "quantitative", "title": "Deaths"}
+            ]
           }
-        ]
-      },
-      "view": {"stroke": null}
+        },
+        {
+          "transform": [{"filter": "datum['Gender'] == 'Male'"}],
+          "mark": {"type": "text", "fontSize": 18, "dy": -95, "dx": -80},
+          "encoding": {
+            "text": {
+              "field": "PercentageD",
+              "type": "nominal",
+              "format": ".0%"
+            },
+            "color": {
+              "field": "Gender",
+              "type": "nominal",
+              "scale": {
+                "domain": ["Female", "Male"],
+                "range": ["#ef6548", "#3690c0"]
+              }
+            },
+            "tooltip": [
+              {"field": "Gender", "type": "nominal"},
+              {"field": "RealValueD", "type": "quantitative", "title": "Deaths"}
+            ]
+          }
+        }
+      ]
     }
-  ]
+  ],
+  "config": {}
 }

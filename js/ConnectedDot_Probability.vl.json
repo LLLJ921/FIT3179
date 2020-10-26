@@ -63,8 +63,81 @@
           {
             "field": "Probability",
             "type": "quantitative",
-             "axis": {"format": "%"},
-            "title": "Probability of Infection (%)"
+            "format": ".2%",
+            "title": "Probability of Infection"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {}
+}{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Probability of Infection by Age Groups",
+  "width": 450,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/male_vs_female.csv"
+  },
+  "encoding": {
+    "x": {
+      "field": "Probability",
+      "type": "quantitative",
+      "axis": {"format": "%"},
+      "title": "Probability of Infection"
+    },
+    "y": {
+      "field": "AGE_GROUP",
+      "type": "nominal",
+      "sort": "descending",
+      "title": "Age Group",
+      "axis": {"offset": 5, "ticks": false, "minExtent": 70, "domain": false}
+    }
+  },
+  "transform": [
+    {"calculate": "datum.Probability_of_infection", "as": "Probability"}
+  ],
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "detail": {"field": "AGE_GROUP", "type": "nominal"},
+        "color": {"value": "#grey"}
+      }
+    },
+    {
+      "selection": {
+        "grid": {"type": "interval", "bind": "scales"},
+        "continent_highlight": {
+          "type": "single",
+          "fields": ["Gender"],
+          "bind": "legend"
+        }
+      },
+      "mark": {"type": "point", "filled": true},
+      "encoding": {
+        "color": {
+          "field": "Gender",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Female", "Male"],
+            "range": ["#ef6548", "#3690c0"]
+          },
+          "title": "Gender"
+        },
+        "size": {"value": 100},
+        "opacity": {
+          "condition": {"selection": "continent_highlight", "value": 1},
+          "value": 0.2
+        },
+        "tooltip": [
+          {"field": "AGE_GROUP", "type": "nominal", "title": "Age Group"},
+          {"field": "Gender", "type": "nominal"},
+          {
+            "field": "Probability",
+            "type": "quantitative",
+            "format": ".2%",
+            "title": "Probability of Infection"
           }
         ]
       }

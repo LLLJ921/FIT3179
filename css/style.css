@@ -164,14 +164,13 @@ h2 {
     height: 36px;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 .sticky-wrapper {
     position: relative;
     height: 36px;
     padding-bottom: 5px;
-        margin-top: 10px;
-    margin-bottom: 15px;
 }
 
 .sticky {

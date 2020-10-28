@@ -231,10 +231,12 @@ function lineDeath() {
 
 window.onscroll = function() {myFunction()};
 
-var navbar = document.getElementById("navBar");
-var sticky = navbar.offsetTop;
 
 function myFunction() {
+  
+  var navbar = document.getElementById("navBar");
+  var sticky = navbar.offsetTop;
+  
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
   } else {

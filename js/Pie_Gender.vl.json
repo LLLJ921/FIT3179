@@ -1,6 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Gender Balance on Confirmed Cases (Left) and Deaths (Right)",
+  "title": {
+    "text": "Gender Balance on Confirmed Cases (Left) and Deaths (Right)",
+    "font": "calibri",
+    "fontSize": 16
+  },
   "padding": {"left": 0, "top": 0, "right": 0, "bottom": 30},
   "data": {
     "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/donut.csv"
@@ -21,8 +25,8 @@
   "transform": [{"filter": "datum.MonthID == Month_selection"}],
   "hconcat": [
     {
-      "width": 250,
-      "height": 250,
+      "width": 300,
+      "height": 270,
       "layer": [
         {
           "mark": {"type": "arc", "innerRadius": 75, "outerRadius": 100},
@@ -30,7 +34,14 @@
             "theta": {"field": "PercentageFullC", "type": "quantitative"},
             "color": {
               "field": "Gender",
+              "title": "",
               "type": "nominal",
+              "legend": {
+                "orient": "bottom-left",
+                "labelFont": "calibri",
+                "labelFontSize": 14,
+                "offset": 15
+              },
               "scale": {
                 "domain": ["Female", "Male"],
                 "range": ["#ef6548", "#3690c0"]
@@ -48,7 +59,7 @@
           "view": {"stroke": null}
         },
         {
-          "mark": {"type": "text", "fontSize": 26},
+          "mark": {"type": "text", "fontSize": 30, "font": "calibri"},
           "encoding": {
             "text": {"field": "Month", "type": "nominal"},
             "opacity": {
@@ -59,7 +70,13 @@
         },
         {
           "transform": [{"filter": "datum['Gender'] == 'Female'"}],
-          "mark": {"type": "text", "fontSize": 18, "dy": -95, "dx": 80},
+          "mark": {
+            "type": "text",
+            "fontSize": 18,
+            "font": "calibri",
+            "dy": -95,
+            "dx": 80
+          },
           "encoding": {
             "text": {
               "field": "PercentageC",
@@ -87,7 +104,13 @@
         },
         {
           "transform": [{"filter": "datum['Gender'] == 'Male'"}],
-          "mark": {"type": "text", "fontSize": 18, "dy": -95, "dx": -80},
+          "mark": {
+            "type": "text",
+            "fontSize": 18,
+            "font": "calibri",
+            "dy": -95,
+            "dx": -80
+          },
           "encoding": {
             "text": {
               "field": "PercentageC",
@@ -116,8 +139,8 @@
       ]
     },
     {
-      "width": 250,
-      "height": 250,
+      "width": 300,
+      "height": 270,
       "layer": [
         {
           "mark": {"type": "arc", "innerRadius": 75, "outerRadius": 100},
@@ -139,7 +162,7 @@
           "view": {"stroke": null}
         },
         {
-          "mark": {"type": "text", "fontSize": 26},
+          "mark": {"type": "text", "fontSize": 30, "font": "calibri"},
           "encoding": {
             "text": {"field": "Month", "type": "nominal"},
             "opacity": {
@@ -150,7 +173,13 @@
         },
         {
           "transform": [{"filter": "datum['Gender'] == 'Female'"}],
-          "mark": {"type": "text", "fontSize": 18, "dy": -95, "dx": 80},
+          "mark": {
+            "type": "text",
+            "fontSize": 18,
+            "font": "calibri",
+            "dy": -95,
+            "dx": 80
+          },
           "encoding": {
             "text": {
               "field": "PercentageD",
@@ -160,6 +189,13 @@
             "color": {
               "field": "Gender",
               "type": "nominal",
+              "title": "",
+              "legend": {
+                "orient": "bottom-left",
+                "labelFont": "calibri",
+                "labelFontSize": 14,
+                "offset": 15
+              },
               "scale": {
                 "domain": ["Female", "Male"],
                 "range": ["#ef6548", "#3690c0"]
@@ -173,7 +209,13 @@
         },
         {
           "transform": [{"filter": "datum['Gender'] == 'Male'"}],
-          "mark": {"type": "text", "fontSize": 18, "dy": -95, "dx": -80},
+          "mark": {
+            "type": "text",
+            "fontSize": 18,
+            "font": "calibri",
+            "dy": -95,
+            "dx": -80
+          },
           "encoding": {
             "text": {
               "field": "PercentageD",
@@ -197,5 +239,6 @@
       ]
     }
   ],
+  "resolve": {"scale": {"color": "independent"}},
   "config": {}
 }

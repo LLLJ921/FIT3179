@@ -161,3 +161,43 @@ h2 {
 
 /* first row: World Case Line Chart */
 
+.navBar, .navBarStuck {
+    height: 36px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ef6548;
+}
+
+.sticky-wrapper {
+    position: relative;
+    height: 36px;
+}
+
+.sticky {
+    position: fixed!important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 65535;
+    opacity: .9;
+    box-shadow: 0 0 5px rgba(0,0,0,.15);
+}
+
+.navBarStuck {
+    color: #000;
+}
+
+.navBar a, .navBarStuck a {
+    text-decoration: none!important;
+}
+
+.navCurrentPageSticky {
+    border-bottom: 2px solid #000;
+    color: #000;
+}
+
+.navItems {
+    margin: .5rem 0 0;
+    padding: 0 8px;
+    border-bottom: 2px solid transparent;
+}

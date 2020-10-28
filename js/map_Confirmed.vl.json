@@ -1,8 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "COVID-19 Confirmed Case by State (Monthly)",
-  "width": 470,
-  "height": 300,
+  "title": {
+    "text": "COVID-19 Confirmed Case by State (Monthly)",
+    "font": "calibri",
+    "fontSize": 16
+  },
+  "width": 550,
+  "height": 350,
   "data": {
     "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/Aus_Month_confirmed.csv"
   },
@@ -32,7 +36,16 @@
         "color": {
           "field": "Confirmed per million population",
           "type": "quantitative",
-          "title": "Confirmed Cases / M",
+          "title": "Confirmed Cases / Million",
+          "legend": {
+            "offset": -540,
+            "padding": 10,
+            "labelFont": "calibri",
+            "labelFontSize": 14,
+            "titleAlign": "left",
+            "titleFont": "calibri",
+            "titleFontSize": 14
+          },
           "scale": {
             "type": "threshold",
             "domain": [1, 10, 100, 1000],
@@ -88,7 +101,7 @@
       }
     },
     {
-      "mark": {"type": "text", "fontSize": 40},
+      "mark": {"type": "text", "fontSize": 50, "font": "calibri"},
       "encoding": {
         "text": {"field": "Month", "type": "nominal"},
         "opacity": {

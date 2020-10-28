@@ -5,8 +5,8 @@
     "font": "calibri",
     "fontSize": 16
   },
-  "width": 550,
-  "height": 350,
+  "width": 580,
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/Aus_Month_confirmed.csv"
   },
@@ -38,7 +38,7 @@
           "type": "quantitative",
           "title": "Confirmed Cases / Million",
           "legend": {
-            "offset": -540,
+            "offset": -570,
             "padding": 10,
             "labelFont": "calibri",
             "labelFontSize": 14,

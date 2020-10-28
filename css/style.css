@@ -52,6 +52,10 @@ h2 {
     height: 360px;
 }
 
+.highlightText {
+    color: #ef6548;
+}
+
 .buttonGroup {
     display: flex;
     flex-wrap: nowrap;

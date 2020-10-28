@@ -110,6 +110,10 @@ h2 {
     height: 10px;
 }
 
+.map {
+    height: 500px;
+}
+
 .map .vega-bind span {
     margin: 0 20px;
 }

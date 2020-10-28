@@ -11,39 +11,39 @@ var spec8 = "https://clairpan.github.io/FIT3179/js/ConnectedDot_Probability.vl.j
 
 var spec9 = "https://clairpan.github.io/FIT3179/js/WordCloud.json";
 
-vegaEmbed('#mapConfirmed', spec1).then(function(result) {
+vegaEmbed('#mapConfirmed', spec1, {"actions": false}).then(function(result) {
   // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
-vegaEmbed('#mapActive', spec2).then(function(result) {
+vegaEmbed('#mapActive', spec2, {"actions": false}).then(function(result) {
   // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
-vegaEmbed('#mapTotalTest', spec3).then(function(result) {
+vegaEmbed('#mapTotalTest', spec3, {"actions": false}).then(function(result) {
   // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
-vegaEmbed('#lineConfirmed', spec4).then(function (result) {
+vegaEmbed('#lineConfirmed', spec4, {"actions": false}).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
-vegaEmbed('#lineActive', spec5).then(function (result) {
+vegaEmbed('#lineActive', spec5, {"actions": false}).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
-vegaEmbed('#lineDeath', spec6).then(function (result) {
+vegaEmbed('#lineDeath', spec6, {"actions": false}).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
-vegaEmbed('#genderPie', spec7).then(function (result) {
+vegaEmbed('#genderPie', spec7, {"actions": false}).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
-vegaEmbed('#genderCDot', spec8).then(function (result) {
+vegaEmbed('#genderCDot', spec8, {"actions": false}).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
-vegaEmbed('#wordCloud', spec9).then(function (result) {
+vegaEmbed('#wordCloud', spec9, {"actions": false}).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 

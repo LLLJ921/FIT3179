@@ -110,6 +110,14 @@ h2 {
     height: 10px;
 }
 
+.maleText {
+    color:#3690c0;
+}
+
+.femaleText {
+    color:#ef6548;
+}
+
 .map {
     height: 420px;
 }

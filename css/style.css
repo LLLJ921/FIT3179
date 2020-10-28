@@ -165,12 +165,14 @@ h2 {
     height: 36px;
     justify-content: space-around;
     align-items: center;
-    background-color: #ef6548;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 .sticky-wrapper {
     position: relative;
     height: 36px;
+    padding-bottom: 5px;
 }
 
 .sticky {
@@ -189,6 +191,7 @@ h2 {
 
 .navBar a, .navBarStuck a {
     text-decoration: none!important;
+    color: #333;
 }
 
 .navCurrentPageSticky {
@@ -207,4 +210,9 @@ h2 {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+}
+
+.navItems:hover {
+    cursor: pointer;
+    color: #ef6548;
 }

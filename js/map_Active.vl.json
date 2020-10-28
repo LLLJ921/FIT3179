@@ -5,7 +5,7 @@
     "font": "calibri",
     "fontSize": 16
   },
-  "width": 550,
+  "width": 600,
   "height": 350,
   "data": {
     "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/Aus_Month_confirmed.csv"
@@ -35,9 +35,9 @@
         },
         "color": {
           "field": "Active per million population",
-          "title": "Active Cases / M",
+          "title": "Active Cases / Million",
           "legend": {
-            "offset": -540,
+            "offset": -580,
             "padding": 10,
             "labelFont": "calibri",
             "labelFontSize": 14,

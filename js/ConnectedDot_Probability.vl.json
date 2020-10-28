@@ -1,7 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Probability of Infection by Age Groups",
-  "width": 450,
+  "title": {
+    "text": "Probability of Infection by Age Groups",
+    "font": "calibri",
+    "fontSize": 16
+  },
+  "width": 550,
   "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/male_vs_female.csv"
@@ -10,7 +14,13 @@
     "x": {
       "field": "Probability",
       "type": "quantitative",
-      "axis": {"format": "%"},
+      "axis": {
+        "format": "%",
+        "labelFont": "calibri",
+        "titleFont": "calibri",
+        "labelFontSize": 12,
+        "titleFontSize": 14
+      },
       "title": "Probability of Infection"
     },
     "y": {
@@ -18,7 +28,16 @@
       "type": "nominal",
       "sort": "descending",
       "title": "Age Group",
-      "axis": {"offset": 5, "ticks": false, "minExtent": 70, "domain": false}
+      "axis": {
+        "offset": 5,
+        "ticks": false,
+        "minExtent": 70,
+        "domain": false,
+        "labelFont": "calibri",
+        "titleFont": "calibri",
+        "labelFontSize": 12,
+        "titleFontSize": 14
+      }
     }
   },
   "transform": [
@@ -46,11 +65,16 @@
         "color": {
           "field": "Gender",
           "type": "nominal",
+          "legend": {
+            "orient": "bottom-right",
+            "labelFont": "calibri",
+            "labelFontSize": 14
+          },
           "scale": {
             "domain": ["Female", "Male"],
             "range": ["#ef6548", "#3690c0"]
           },
-          "title": "Gender"
+          "title": ""
         },
         "size": {"value": 100},
         "opacity": {

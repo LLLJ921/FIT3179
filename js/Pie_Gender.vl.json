@@ -25,7 +25,7 @@
   "transform": [{"filter": "datum.MonthID == Month_selection"}],
   "hconcat": [
     {
-      "width": 300,
+      "width": 290,
       "height": 270,
       "layer": [
         {
@@ -139,7 +139,7 @@
       ]
     },
     {
-      "width": 300,
+      "width": 290,
       "height": 270,
       "layer": [
         {

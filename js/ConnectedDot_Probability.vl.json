@@ -5,7 +5,7 @@
     "font": "calibri",
     "fontSize": 16
   },
-  "width": 530,
+  "width": 510,
   "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/male_vs_female.csv"

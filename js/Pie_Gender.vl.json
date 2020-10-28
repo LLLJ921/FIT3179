@@ -5,7 +5,7 @@
     "font": "calibri",
     "fontSize": 16
   },
-  "padding": {"left": 0, "top": 0, "right": 0, "bottom": 30},
+  "padding": {"left": 0, "top": 0, "right": 0, "bottom": 10},
   "data": {
     "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/donut.csv"
   },

@@ -1,6 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "COVID-19 Confirmed Case",
+  "title": {
+    "text": "COVID-19 Confirmed Case",
+    "font": "calibri",
+    "fontSize": 16
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/TenCountry.csv"
   },
@@ -8,59 +12,78 @@
   "height": 300,
   "transform": [],
   "encoding": {
-    "x": {"timeUnit": "monthdate", "field": "Date", "title": "",
-      "axis": {"grid":false}},
+    "x": {
+      "timeUnit": "monthdate",
+      "field": "Date",
+      "title": "",
+      "axis": {
+        "grid": false,
+        "labelFont": "calibri",
+        "titleFont": "calibri",
+        "labelFontSize": 12
+      }
+    },
     "y": {
       "aggregate": "sum",
       "field": "Confirmed",
       "type": "quantitative",
       "title": "Confirmed Cases (square-root scale)",
       "scale": {"type": "sqrt"},
-      "axis": {"tickCount":5}
+      "axis": {
+        "tickCount": 5,
+        "labelFont": "calibri",
+        "titleFont": "calibri",
+        "titleFontSize": 14,
+        "labelFontSize": 12
+      }
     }
   },
   "layer": [
     {
-	  "selection": {
-        "grid": {
-          "type": "interval", "bind": "scales"
-        } 
-      },
+      "selection": {"grid": {"type": "interval", "bind": "scales"}},
       "mark": {"type": "line", "interpolate": "monotone"},
       "encoding": {
         "color": {
-          "field": "Country/Region", 
+          "field": "Country/Region",
           "type": "nominal",
-		  "title": "Country",
+          "title": "",
+          "legend": {
+            "offset": -450,
+            "padding": 10,
+            "labelFont": "calibri",
+            "labelFontSize": 14
+          },
           "scale": {
-            "domain": [ 
-              "Australia", 
-              "Canada", 
-              "China", 
-              "France", 
-              "India", 
-              "Italy", 
-              "New Zealand", 
-              "Russia", 
+            "domain": [
+              "Australia",
+              "Canada",
+              "China",
+              "France",
+              "India",
+              "Italy",
+              "New Zealand",
+              "Russia",
               "US",
-              "United Kingdom" 
-            ], 
+              "United Kingdom"
+            ],
             "range": [
-              "#de2d26", 
-              "#beaed4", 
-              "#fdc086", 
-              "#fb9a99", 
-              "#386cb0", 
-              "#1b9e77", 
-              "#7fc97f", 
-              "#7570b3", 
-              "#e7298a", 
-              "#66a61e" 
+              "#de2d26",
+              "#beaed4",
+              "#fdc086",
+              "#fb9a99",
+              "#386cb0",
+              "#1b9e77",
+              "#7fc97f",
+              "#7570b3",
+              "#e7298a",
+              "#66a61e"
             ]
           }
         },
         "opacity": {
-          "condition": [{"test": "datum['Country/Region'] == 'Australia'", "value": 0.8}],
+          "condition": [
+            {"test": "datum['Country/Region'] == 'Australia'", "value": 0.8}
+          ],
           "value": 0.2
         },
         "tooltip": [
@@ -76,13 +99,16 @@
     },
     {
       "transform": [
-        {"filter": "(datum['Country/Region'] == 'China' && datum['Date'] == 1582635600000) || (datum['Country/Region'] == 'Australia' && datum['Date'] == 1593871200000) || (datum['Country/Region'] == 'US' && datum['Date'] == 1592143200000) || (datum['Country/Region'] == 'Russia' && datum['Date'] == 1589983200000)"}
+        {
+          "filter": "(datum['Country/Region'] == 'China' && datum['Date'] == 1582635600000) || (datum['Country/Region'] == 'Australia' && datum['Date'] == 1593871200000) || (datum['Country/Region'] == 'US' && datum['Date'] == 1592143200000) || (datum['Country/Region'] == 'Russia' && datum['Date'] == 1589983200000)"
+        }
       ],
       "mark": {
         "type": "text",
         "align": "center",
         "baseline": "middle",
         "dy": -12,
+        "font": "calibri",
         "fontSize": 14,
         "fontStyle": "italic"
       },
@@ -90,11 +116,8 @@
         "text": {"field": "Country/Region", "type": "nominal"},
         "color": {"value": "black"},
         "opacity": {
-          "condition":  [
-            {
-              "test": "datum['Country/Region'] == 'Australia'", 
-              "value": 0.8
-            }
+          "condition": [
+            {"test": "datum['Country/Region'] == 'Australia'", "value": 0.8}
           ],
           "value": 0.2
         },

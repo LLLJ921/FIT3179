@@ -8,7 +8,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/TenCountry.csv"
   },
-  "width": 520,
+  "width": 530,
   "height": 300,
   "transform": [],
   "encoding": {
@@ -48,7 +48,7 @@
           "type": "nominal",
           "title": "",
           "legend": {
-            "offset": -520,
+            "offset": -530,
             "padding": 10,
             "labelFont": "calibri",
             "labelFontSize": 14

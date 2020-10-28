@@ -201,3 +201,10 @@ h2 {
     padding: 0 8px;
     border-bottom: 2px solid transparent;
 }
+
+.navRow {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}

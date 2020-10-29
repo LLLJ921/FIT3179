@@ -3,7 +3,9 @@
   "title": {
     "text": "Gender Balance on Confirmed Cases (Left) and Deaths (Right)",
     "font": "calibri",
-    "fontSize": 16
+    "fontSize": 16,
+    "align": "center",
+    "anchor": "middle"
   },
   "padding": {"left": 0, "top": 0, "right": 0, "bottom": 10},
   "data": {

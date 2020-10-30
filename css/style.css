@@ -12,7 +12,8 @@ body {
 }
 
 .header h1 {
-    font-family: 'Playfair Display SC', serif;
+    /*font-family: 'Playfair Display SC', serif;*/
+    font-family: 'Lobster', cursive;
 }
 
 h2 {

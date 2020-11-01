@@ -54,7 +54,8 @@ h2 {
 }
 
 .highlightText {
-    color: #ef6548;
+    /*color: #ef6548;*/
+    font-weight: bold;
 }
 
 .buttonGroup {

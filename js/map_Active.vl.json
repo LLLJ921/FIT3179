@@ -35,7 +35,7 @@
         },
         "color": {
           "field": "Active per million population",
-          "title": "Active Cases / Million",
+          "title": "Active Cases / M",
           "legend": {
             "offset": -580,
             "padding": 10,

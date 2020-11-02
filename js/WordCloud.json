@@ -83,7 +83,7 @@
           "font": "Montserrat",
           "fontSize": {"field": "datum.count"},
           "fontWeight": {"field": "datum.weight"},
-          "fontSizeRange": [12, 50],
+          "fontSizeRange": [12, 44],
           "padding": 2
         }
       ]

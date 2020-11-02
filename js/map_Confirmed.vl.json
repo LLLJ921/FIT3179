@@ -36,7 +36,7 @@
         "color": {
           "field": "Confirmed per million population",
           "type": "quantitative",
-          "title": "Confirmed Cases / Million",
+          "title": "Confirmed Cases / M",
           "legend": {
             "offset": -580,
             "padding": 10,

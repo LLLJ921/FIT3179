@@ -29,7 +29,8 @@
         "labelFont": "Montserrat",
         "titleFont": "Montserrat",
         "titleFontSize": 14,
-        "labelFontSize": 12
+        "labelFontSize": 12,
+        "format": ".2s"
       }
     }
   },

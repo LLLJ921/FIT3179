@@ -61,7 +61,7 @@
           "view": {"stroke": null}
         },
         {
-          "mark": {"type": "text", "fontSize": 30, "font": "Montserrat"},
+          "mark": {"type": "text", "fontSize": 26, "font": "Montserrat"},
           "encoding": {
             "text": {"field": "Month", "type": "nominal"},
             "opacity": {
@@ -164,7 +164,7 @@
           "view": {"stroke": null}
         },
         {
-          "mark": {"type": "text", "fontSize": 30, "font": "Montserrat"},
+          "mark": {"type": "text", "fontSize": 26, "font": "Montserrat"},
           "encoding": {
             "text": {"field": "Month", "type": "nominal"},
             "opacity": {

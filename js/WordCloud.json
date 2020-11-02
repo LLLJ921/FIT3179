@@ -80,7 +80,7 @@
           "type": "wordcloud",
           "size": [650, 350],
           "text": {"field": "text"},
-          "font": "calibri",
+          "font": "Montserrat",
           "fontSize": {"field": "datum.count"},
           "fontWeight": {"field": "datum.weight"},
           "fontSizeRange": [12, 50],

@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": {"text": "COVID-19 Active Case", "font": "calibri", "fontSize": 16},
+  "title": {"text": "COVID-19 Active Case", "font": "Montserrat", "fontSize": 16},
   "data": {
     "url": "https://raw.githubusercontent.com/ClairPan/FIT3179/main/data/TenCountry.csv"
   },
@@ -14,8 +14,8 @@
       "title": "",
       "axis": {
         "grid": false,
-        "labelFont": "calibri",
-        "titleFont": "calibri",
+        "labelFont": "Montserrat",
+        "titleFont": "Montserrat",
         "labelFontSize": 12
       }
     },
@@ -27,8 +27,8 @@
       "scale": {"type": "sqrt"},
       "axis": {
         "tickCount": 5,
-        "labelFont": "calibri",
-        "titleFont": "calibri",
+        "labelFont": "Montserrat",
+        "titleFont": "Montserrat",
         "titleFontSize": 14,
         "labelFontSize": 12
       }
@@ -45,7 +45,7 @@
           "legend": {
             "offset": -530,
             "padding": 10,
-            "labelFont": "calibri",
+            "labelFont": "Montserrat",
             "labelFontSize": 14
           },
           "title": "",
@@ -99,7 +99,7 @@
         "type": "text",
         "align": "center",
         "baseline": "middle",
-        "font": "calibri",
+        "font": "Montserrat",
         "dy": -12,
         "fontSize": 14,
         "fontStyle": "italic"
